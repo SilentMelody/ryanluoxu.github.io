@@ -1,0 +1,271 @@
+
+
+<!DOCTYPE html>
+<html lang="">
+<head prefix="og: http://ogp.me/ns#">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+    <meta name="description" content="Share anything I have for programming">
+    <title>Git - 学习笔记 | RyanLuoXu Blog</title>
+
+    <!-- Open Graph -->
+    <meta name="description" content="&amp;#x58F0;&amp;#x660E;&amp;#xFF1A;&amp;#x672C;&amp;#x6587;&amp;#x4E3A; ryanluoxu &amp;#x539F;&amp;#x521B;&amp;#x6587;&amp;#x7AE0;&amp;#xFF0C;&amp;#x53EF;&amp;">
+<meta name="keywords" content="Git,学习笔记">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Git - 学习笔记">
+<meta property="og:url" content="https://ryanluoxu.github.io/2017/11/24/Git-学习笔记/index.html">
+<meta property="og:site_name" content="RyanLuoXu Blog">
+<meta property="og:description" content="&amp;#x58F0;&amp;#x660E;&amp;#xFF1A;&amp;#x672C;&amp;#x6587;&amp;#x4E3A; ryanluoxu &amp;#x539F;&amp;#x521B;&amp;#x6587;&amp;#x7AE0;&amp;#xFF0C;&amp;#x53EF;&amp;#x4EE5;&amp;#x8F6C;&amp;#x8F7D;&amp;#xFF0C;&amp;#x4F46;&amp;#x5FC5;&amp;#x987B;&amp;#x5728;&amp;#x660E;&amp;#x663E;&amp;#x4F4D;&amp;#x7F">
+<meta property="og:image" content="https://ryanluoxu.github.io/images/本地修改-github的流程图.jpg">
+<meta property="og:updated_time" content="2017-11-24T15:42:40.123Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Git - 学习笔记">
+<meta name="twitter:description" content="&amp;#x58F0;&amp;#x660E;&amp;#xFF1A;&amp;#x672C;&amp;#x6587;&amp;#x4E3A; ryanluoxu &amp;#x539F;&amp;#x521B;&amp;#x6587;&amp;#x7AE0;&amp;#xFF0C;&amp;#x53EF;&amp;#x4EE5;&amp;#x8F6C;&amp;#x8F7D;&amp;#xFF0C;&amp;#x4F46;&amp;#x5FC5;&amp;#x987B;&amp;#x5728;&amp;#x660E;&amp;#x663E;&amp;#x4F4D;&amp;#x7F">
+<meta name="twitter:image" content="https://ryanluoxu.github.io/images/本地修改-github的流程图.jpg">
+
+    <script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "Person",
+  "email": "mailto:",
+  "image": "",
+  "name": "Ryan Luo Xu 罗旭",
+  "url": "https://ryanluoxu.github.io"
+}
+</script>
+    <script>
+    var algoliaEnabled = false;
+    
+</script>
+
+    
+
+    
+    
+        <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+    
+    
+    
+        <!-- stylesheets list from config.yml -->
+        
+        <link rel="stylesheet" href="/css/aloha.css">
+        
+        <link rel="stylesheet" href="//cdn.bootcss.com/semantic-ui/2.2.4/semantic.min.css">
+        
+        <link rel="stylesheet" href="//cdn.bootcss.com/magnific-popup.js/1.1.0/magnific-popup.min.css">
+        
+    
+
+</head>
+<body id="body" style="margin-bottom: 0;" class="pushable">
+
+    <div class="ui top fixed menu">
+        <a class="item" id="menu-icon"><i class="sidebar icon"></i></a>
+    </div>
+
+    <div id="menu-sidebar" class="ui left vertical sidebar menu">
+
+    <div id="sidebar-top">
+        <div class="content">
+            <h3>RyanLuoXu Blog</h3>
+        </div>
+    </div>
+    <div class="ui container sidebar-card">
+    <div class="ui people shape content">
+        <div class="active side">
+            <div class="ui card">
+                <div class="image">
+                    <img class="ui medium bordered image" src="/images/avatar.jpg">
+                </div>
+                <div class="content">
+                    <a class="header">Ryan Luo Xu 罗旭</a>
+                    
+                </div>
+                <div class="extra content">
+                    <div class="ui list">
+                        
+                        
+                    </div>
+
+                </div>
+                <div class="extra content">
+                    <div class="ui list">
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+</div>
+
+    
+    
+
+    
+
+    
+    <a href="/index.html" class="item" >
+        <i class="home icon"></i>
+        HOME
+    </a>
+
+    
+
+    
+</div>
+
+    <div class="pusher body-content">
+        <div id="content" class="ui main container">
+            <!--<div class="ui one column grid">-->
+                <!--<div class="column">-->
+                    <!--<div class="ui main container">-->
+                        <div id="post-Git-学习笔记" class="ui main container article-type-post">
+
+    
+
+    <div class="ui divided grid">
+
+        <div class="two column row" id="article-content">
+
+            <div class="thirteen wide computer thirteen wide tablet sixteen wide mobile column">
+                
+
+<h1 class="ui header">
+    
+    Git - 学习笔记
+</h1>
+
+
+
+                <div class="article-inner">
+
+                    <div class="article-entry" itemprop="articleBody">
+                        
+                        <p><strong>&#x58F0;&#x660E;&#xFF1A;&#x672C;&#x6587;&#x4E3A; ryanluoxu &#x539F;&#x521B;&#x6587;&#x7AE0;&#xFF0C;&#x53EF;&#x4EE5;&#x8F6C;&#x8F7D;&#xFF0C;&#x4F46;&#x5FC5;&#x987B;&#x5728;&#x660E;&#x663E;&#x4F4D;&#x7F6E;&#x6CE8;&#x660E;&#x51FA;&#x5904;&#xFF01;</strong></p>
+<h3 id="&#x6587;&#x4EF6;&#x7684;&#x4E09;&#x79CD;&#x72B6;&#x6001;"><a href="#&#x6587;&#x4EF6;&#x7684;&#x4E09;&#x79CD;&#x72B6;&#x6001;" class="headerlink" title="&#x6587;&#x4EF6;&#x7684;&#x4E09;&#x79CD;&#x72B6;&#x6001;"></a>&#x6587;&#x4EF6;&#x7684;&#x4E09;&#x79CD;&#x72B6;&#x6001;</h3><ul class="ui list">
+<li>&#x5DF2;&#x4FEE;&#x6539; modified &#xFF1A; &#x5BF9;&#x67D0;&#x4E2A;&#x6587;&#x4EF6;&#x8FDB;&#x884C;&#x4FEE;&#x6539;&#xFF0C;&#x4FDD;&#x5B58;&#x5B8C;&#x6210;&#x3002;</li>
+<li>&#x5DF2;&#x6682;&#x5B58; staged &#xFF1A; &#x6267;&#x884C; <code>git add</code> &#x4E4B;&#x540E;</li>
+<li>&#x5DF2;&#x63D0;&#x4EA4; committed &#xFF1A; &#x6267;&#x884C; <code>git commit</code> &#x4E4B;&#x540E;</li>
+</ul>
+<p>&#x8FD9;&#x91CC;&#x7684;&#x63D0;&#x4EA4;&#x76EE;&#x7684;&#x5730;&#xFF0C;&#x662F;&#x672C;&#x5730; repository&#x3002;<br>&#x5E38;&#x7528;&#x7684; github &#x4E3A; remote repository&#x3002;<br>&#x5982;&#x679C;&#x9700;&#x8981;&#x5C06;&#x672C;&#x5730; repository &#x540C;&#x6B65;&#x5230; github &#x4E0A;&#xFF0C;&#x9700;&#x8981;&#x6267;&#x884C; <code>git push</code>&#x3002;    </p>
+<p>&#x6240;&#x4EE5;&#x5BF9;&#x672C;&#x5730;&#x6587;&#x4EF6;&#x8FDB;&#x884C;&#x4FEE;&#x6539;&#xFF0C;&#x5230;&#x540C;&#x6B65;&#x5230; github&#xFF0C;&#x57FA;&#x672C;&#x6D41;&#x7A0B;&#x5982;&#x4E0B;&#xFF1A;   </p>
+<p><a class="magnific-img" href="/images/&#x672C;&#x5730;&#x4FEE;&#x6539;-github&#x7684;&#x6D41;&#x7A0B;&#x56FE;.jpg"><img src="/images/&#x672C;&#x5730;&#x4FEE;&#x6539;-github&#x7684;&#x6D41;&#x7A0B;&#x56FE;.jpg" alt="&#x672C;&#x5730;&#x4FEE;&#x6539;-github&#x7684;&#x6D41;&#x7A0B;&#x56FE;" class="ui centered image"></a></p>
+
+                        
+                    </div>
+
+                    
+                    
+                    
+
+                    <div class="description post-description">
+    <span class="post-description-item">
+        <time datetime="2017-11-24T14:46:23.000Z" itemprop="datePublished">2017-11-24</time>
+
+    </span>
+    <span class="post-description-item">
+        
+
+    <span>
+        <i class="tags icon"></i>
+    </span>
+
+    
+    <span class="ui tiny label">
+        <a href="/tags/Git/">Git</a>
+    </span>
+
+    
+    <span class="ui tiny label">
+        <a href="/tags/学习笔记/">学习笔记</a>
+    </span>
+
+    
+
+    </span>
+</div>
+
+                </div>
+                
+                <div id="pagination" class="nav-web ui text container pagination">
+
+    <div class="ui stackable two column divided grid container">
+        <div class="row">
+            <div class="column nav-left">
+                
+
+                <a class="ui tiny button disabled"><i class="angle left icon"></i>Previous</a>
+
+                
+            </div>
+            <div class="column nav-right">
+                
+
+                <a href="/2017/11/24/用-Hexo-和-GitHub-Pages-搭建博客/" class="ui tiny button">
+                    
+                    用 Hexo 和 GitHub Pages 搭建博客
+                    
+                    <i class="angle right icon"></i></a>
+                
+            </div>
+        </div>
+    </div>
+
+</div>
+                
+            </div>
+
+            
+            <div class="three wide computer three wide tablet column">
+
+                <div class="ui sticky article-toc" id="article-toc">
+                    <!-- toc -->
+                    <ol class="ui ordered list"><li><a href="#文件的三种状态"><span>文件的三种状态</span></a></li></ol>
+                </div>
+
+            </div>
+            
+
+        </div>
+    </div>
+</div>
+
+
+                    <!--</div>-->
+                <!--</div>-->
+            <!--</div>-->
+        </div>
+        <div class="ui vertical footer segment">
+    <div class="ui center aligned container">
+        <div class="ui inverted section divider"></div>
+        &copy; 2017 <a href="/">Ryan Luo Xu 罗旭</a>,
+        Powered by <a href="https://github.com/henryhuang/hexo-theme-aloha" target="_blank">Aloha</a> and <a
+                href="http://hexo.io/" target="_blank">Hexo</a>.
+    </div>
+</div>
+
+    </div>
+
+
+
+
+<!-- scripts list from theme config.yml -->
+
+<script src="//cdn.bootcss.com/jquery/3.1.0/jquery.min.js"></script>
+
+<script src="//cdn.bootcss.com/semantic-ui/2.2.4/semantic.min.js"></script>
+
+<script src="//cdn.bootcss.com/algoliasearch/3.18.1/algoliasearch.min.js"></script>
+
+<script src="//cdn.bootcss.com/algoliasearch-helper-js/2.13.0/algoliasearch.helper.min.js"></script>
+
+<script src="/js/semantic-ui-algolia.js"></script>
+
+<script src="/js/aloha-events.js"></script>
+
+
+
+</body>
+</html>
