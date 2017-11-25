@@ -862,9 +862,8 @@ hexo d
           
             <p><strong>声明：本文为 ryanluoxu 原创文章，可以转载，但必须在明显位置注明出处！</strong></p>
 <p>搭建这个博客走了许多弯路。在这里分享总结之后的思路和简化步骤。</p>
-<h2 id="分别理解-Github-Pages-和-Hexo"><a href="#分别理解-Github-Pages-和-Hexo" class="headerlink" title="分别理解 Github Pages 和 Hexo"></a>分别理解 Github Pages 和 Hexo</h2><p>在把这两者结合起来一起搭建博客之前，我觉得如果能分别了解一下，会对之后的操作有所帮助。</p>
-<h3 id="Github-Pages"><a href="#Github-Pages" class="headerlink" title="Github Pages"></a>Github Pages</h3><p>Github Pages 其实本身就是 Github 提供的博客服务。 我们在 Github 中创建一个特定格式的 Repository，Github Pages 就会将里面的信息生成一个网页，展示出来。</p>
-<p>操作一遍，你就明白了：</p>
+<h2 id="Github-Pages"><a href="#Github-Pages" class="headerlink" title="Github Pages"></a>Github Pages</h2><p>Github Pages 其实本身就是 Github 提供的博客服务。 我们在 Github 中创建一个特定格式的 Repository，Github Pages 就会将里面的信息生成一个网页，展示出来。</p>
+<p><strong>操作如下：</strong></p>
 <ol>
 <li>注册 Github 账号，然后在 Github 中创建一个以 .github.io 结尾的 Repository。 <ol>
 <li>Repository name: ryanluoxu.github.io</li>
@@ -872,23 +871,24 @@ hexo d
 <li>Create repository</li>
 </ol>
 </li>
-<li>简单地编辑一下 README.md 这个文档。 比如添加：I am trying to make my own blog.. 保存(Commit changes)。</li>
+<li>简单地编辑一下 README.md 这个文档。 比如添加：I am trying to create my own blog.. 保存(Commit changes)。</li>
 <li>打开网页：ryanluoxu.github.io 这里就可以看到 README.md 里的内容了。</li>
 </ol>
 <p>如果没有太多的要求，其实直接用 README.md 来写博客也是不错的。 </p>
-<p>这个生成好的 Repository 就是用来存放博客内容的地方，也只有这里面的内容，才会被 ryanluoxu.github.io 这个网页显示出来。 </p>
-<h3 id="Hexo"><a href="#Hexo" class="headerlink" title="Hexo"></a>Hexo</h3><p>Hexo 是一个博客框架。它把本地文件里的信息生成一个网页。如果不需要放在网上给别人看，就没 Github Pages 什么事了。</p>
+<p>这个生成好的 Repository 就是用来存放博客内容的地方，也只有这个仓库里的内容，才会被 ryanluoxu.github.io 这个网页显示出来。 </p>
+<h2 id="Hexo"><a href="#Hexo" class="headerlink" title="Hexo"></a>Hexo</h2><p>Hexo 是一个博客框架。它把本地文件里的信息生成一个网页。如果不需要放在网上给别人看，就没 Github Pages 什么事了。</p>
 <p>使用 Hexo 之前，需要先安装 Node.js 和 Git。</p>
-<p>操作一下：</p>
+<p><strong>操作如下：</strong></p>
 <ol>
 <li><p>安装 Node.js</p>
 <ul>
 <li>前往 <a href="https://nodejs.org/en/" target="_blank" rel="noopener">https://nodejs.org/en/</a></li>
 <li>点击 8.9.1 LTS 下载</li>
 <li>安装</li>
-<li>打开 Command Prompt， 输入：node -v</li>
-<li>得到：v8.9.1</li>
-<li>安装成功    </li>
+<li>打开 Command Prompt， 输入 <code>node -v</code></li>
+<li><p>得到：v8.9.1</p>
+<p>安装成功    </p>
+</li>
 </ul>
 </li>
 <li><p>安装 Git</p>
@@ -898,9 +898,9 @@ hexo d
 <li>点击 Windows</li>
 <li>一般情况，下载会自动开始。如果没有，就点击 click here to download manually</li>
 <li>安装</li>
-<li>打开 Command Prompt， 输入：git –version</li>
-<li>得到：git version 2.15.0.windows.1</li>
-<li><p>安装成功</p>
+<li>打开 Command Prompt， 输入 <code>git --version</code></li>
+<li><p>得到：git version 2.15.0.windows.1</p>
+<p>安装成功</p>
 <p>额外说明：如果 Git –version 指令不管用，可能需要到 Environment Variable 那里添加 Path。</p>
 </li>
 </ul>
@@ -908,11 +908,12 @@ hexo d
 <li><p>安装 Hexo </p>
 <ul>
 <li>打开 Command Prompt</li>
-<li>输入：npm install -g hexo-cli</li>
+<li>输入 <code>npm install -g hexo-cli</code></li>
 <li>回车开始安装</li>
-<li>输入：hexo -v </li>
-<li>得到：hexo-cli: 1.0.4 等一串数据</li>
-<li>安装成功</li>
+<li>输入 <code>hexo -v</code> </li>
+<li><p>得到 hexo-cli: 1.0.4 等一串数据</p>
+<p>安装成功</p>
+</li>
 </ul>
 </li>
 <li><p>创建本地博客</p>
@@ -925,21 +926,60 @@ hexo d
 <li>输入 <code>hexo g</code> 生成（generate）网页。 由于我们还没创建任何博客，生成的网页会展示 Hexo 里面自带了一个 Hello World 的博客。</li>
 <li>输入 <code>hexo s</code> 将生成的网页放在了本地服务器（server）。  </li>
 <li>浏览器里输入 <a href="http://localhost:4000/" target="_blank" rel="noopener">http://localhost:4000/</a> 。 就可以看到刚才的成果了。</li>
-<li>回到 Git Bash，按 Ctrl+C 结束。</li>
+<li><p>回到 Git Bash，按 Ctrl+C 结束。</p>
+<p>此时再看 <a href="http://localhost:4000/" target="_blank" rel="noopener">http://localhost:4000/</a> 就是无法访问了。</p>
+</li>
 </ul>
 </li>
 <li><p>发布一篇博客</p>
 <ul>
-<li>继续在 Git Bash 里，所在路径还是 /d/blog。输入 </li>
+<li>继续在 Git Bash 里，所在路径还是 /d/blog。输入 <code>hexo new &quot;My First Post&quot;</code></li>
+<li>在 D:\blog\source_posts 路径下，会有一个 My-First-Post.md 的文件。 编辑这个文件，然后保存。</li>
+<li>回到 Git Bash，输入 <code>hexo g</code></li>
+<li>输入 <code>hexo s</code></li>
+<li>前往 <a href="http://localhost:4000/" target="_blank" rel="noopener">http://localhost:4000/</a> 查看成果。</li>
+<li>回到 Git Bash，按 Ctrl+C 结束。</li>
 </ul>
 </li>
 </ol>
-<p>所以</p>
-<h3 id="1-注册-github-账号"><a href="#1-注册-github-账号" class="headerlink" title="1. 注册 github 账号"></a>1. 注册 github 账号</h3><h3 id="2-登录后，添加一个-github-io-结尾的-repository。复制地址。"><a href="#2-登录后，添加一个-github-io-结尾的-repository。复制地址。" class="headerlink" title="2. 登录后，添加一个 .github.io 结尾的 repository。复制地址。"></a>2. 登录后，添加一个 .github.io 结尾的 repository。复制地址。</h3><h3 id="3-安装-Hexo。"><a href="#3-安装-Hexo。" class="headerlink" title="3. 安装 Hexo。"></a>3. 安装 Hexo。</h3><pre><code>3.1 安装 Git
-3.2 安装 Node.js
-3.3 安装 Hexo
-</code></pre><h3 id="4-建立本地博客"><a href="#4-建立本地博客" class="headerlink" title="4. 建立本地博客"></a>4. 建立本地博客</h3><pre><code>4.1 本地建立一个博客文件夹。
-4.2 打开 git bash，进入到该文件夹。
+<h2 id="将本地-Hexo-博客部署在-Github-上"><a href="#将本地-Hexo-博客部署在-Github-上" class="headerlink" title="将本地 Hexo 博客部署在 Github 上"></a>将本地 Hexo 博客部署在 Github 上</h2><p>前面两个部分，我们已经有了本地博客，和一个能托管这些资料的线上仓库。只要把本地博客部署（deploy）在我们的 Github 对应的 Repository 就可以了。 </p>
+<ol>
+<li><p>获取 Github 对应的 Repository 的链接。</p>
+<ul>
+<li>登陆 Github，进入到 ryanluoxu.github.io</li>
+<li>点击 Clone or download</li>
+<li><p>复制 URL 待用</p>
+<p>我的是 <code>https://github.com/Ryanluoxu/ryanluoxu.github.io.git</code></p>
+</li>
+</ul>
+</li>
+<li><p>修改博客的配置文件 </p>
+<ul>
+<li>打开配置文件 /d/blog/_config.yml （使用 bash 里的 vi 或者 notepad++）</li>
+<li><p>找到 <code>#Deployment</code>，填入以下内容：</p>
+<pre><code>deploy:  
+  type: git  
+  repository: https://github.com/Ryanluoxu/ryanluoxu.github.io.git  
+  branch: master 
+</code></pre></li>
+<li><p>保存退出</p>
+<p>·</p>
+</li>
+</ul>
+</li>
+<li><p>部署</p>
+<ul>
+<li>回到 Git Bash</li>
+<li>输入 <code>npm install hexo-deployer-git --save</code> 安装 hexo-deployer-git 此步骤只需要做一次。</li>
+<li>输入 <code>hexo d</code></li>
+<li>得到 <code>INFO  Deploy done: git</code> 即为部署成功</li>
+</ul>
+</li>
+</ol>
+<ol>
+<li>在</li>
+</ol>
+<pre><code>4.2 打开 git bash，进入到该文件夹。
 4.3 hexo init
 4.4 git clone https://github.com/henryhuang/hexo-theme-aloha.git themes/aloha 
 4.5 修改 _config.yml 里的 theme: aloha
@@ -950,7 +990,7 @@ hexo d
 4.10 git commit -m &quot;First Hexo Blog Post&quot;
 4.11 git remote add origin https://github.com/Ryanluoxu/ryanluoxu.github.io.git
 4.12 git push origin master
-</code></pre><h3 id="5-打开-https-ryanluoxu-github-io"><a href="#5-打开-https-ryanluoxu-github-io" class="headerlink" title="5. 打开 https://ryanluoxu.github.io/"></a>5. 打开 <a href="https://ryanluoxu.github.io/">https://ryanluoxu.github.io/</a></h3>
+</code></pre><h2 id="使用-Next-主题"><a href="#使用-Next-主题" class="headerlink" title="使用 Next 主题"></a>使用 Next 主题</h2>
           
         
       
