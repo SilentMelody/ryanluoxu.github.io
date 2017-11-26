@@ -89,7 +89,7 @@
 <meta property="og:locale" content="en">
 <meta property="og:image" content="https://ryanluoxu.github.io/images/博客主页下方访问量.png">
 <meta property="og:image" content="https://ryanluoxu.github.io/images/文章页面访问量.png">
-<meta property="og:updated_time" content="2017-11-26T06:31:01.225Z">
+<meta property="og:updated_time" content="2017-11-26T06:54:06.591Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Hexo 的 Next 主题优化">
 <meta name="twitter:description" content="声明：本文为 ryanluoxu 原创文章，欢迎转载，请在明显位置注明出处。 这篇博客用来记录和分享我对博客优化的过程，均为实际经历。欢迎纠正，与君共勉。 修改 Next 主题的 SchemeNext 默认的风格是 Muse。现有的四个风格里，我最喜欢 Gemini。 因为此风格的博客首页里，每篇博客有明显的分割。菜单在左侧，方便访问时转到别的页面。   操作如下：  打开 D:\blog\the">
@@ -241,7 +241,7 @@
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Ryan Luo Xu 罗旭">
       <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="image" content="/images/头像1.jpg">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
@@ -354,7 +354,14 @@
 <li>如下修改： </li>
 </ol>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">busuanzi_count:</span><br><span class="line">  # count values only if the other configs are false</span><br><span class="line">  enable: true	// 此处</span><br><span class="line">  # custom uv span for the whole site</span><br><span class="line">  site_uv: true</span><br><span class="line">  site_uv_header: &lt;i class=&quot;fa fa-user&quot;&gt;&lt;/i&gt; Visitor // 此处</span><br><span class="line">  site_uv_footer:</span><br><span class="line">  # custom pv span for the whole site</span><br><span class="line">  site_pv: true</span><br><span class="line">  site_pv_header: &lt;i class=&quot;fa fa-eye&quot;&gt;&lt;/i&gt; Total Visit // 此处</span><br><span class="line">  site_pv_footer:</span><br><span class="line">  # custom pv span for one page only</span><br><span class="line">  page_pv: true</span><br><span class="line">  page_pv_header: &lt;i class=&quot;fa fa-file-o&quot;&gt;&lt;/i&gt; View // 此处</span><br><span class="line">  page_pv_footer:</span><br></pre></td></tr></table></figure>
-
+<h2 id="添加头像"><a href="#添加头像" class="headerlink" title="添加头像"></a>添加头像</h2><p><strong>操作如下：</strong></p>
+<ol>
+<li>将头像照片 <code>头像1.jpg</code> 保存到 D:\blog\themes\next\source\images 路径下。</li>
+<li>打开 D:\blog\themes\next_config.yml</li>
+<li>找到 <code>Sidebar Avatar</code></li>
+<li>如下修改： </li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"># Sidebar Avatar</span><br><span class="line"># in theme directory(source/images): /images/avatar.gif</span><br><span class="line"># in site  directory(source/uploads): /uploads/avatar.gif</span><br><span class="line">avatar: /images/头像1.jpg</span><br></pre></td></tr></table></figure>
       
     </div>
     
@@ -464,6 +471,10 @@
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
+              <img class="site-author-image" itemprop="image"
+                src="/images/头像1.jpg"
+                alt="Ryan Luo Xu 罗旭" />
+            
               <p class="site-author-name" itemprop="name">Ryan Luo Xu 罗旭</p>
               <p class="site-description motion-element" itemprop="description">Share anything I have on programming</p>
           </div>
@@ -532,7 +543,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#修改-Next-主题的-Scheme"><span class="nav-number">1.</span> <span class="nav-text">修改 Next 主题的 Scheme</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#添加访问统计"><span class="nav-number">2.</span> <span class="nav-text">添加访问统计</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#修改-Next-主题的-Scheme"><span class="nav-number">1.</span> <span class="nav-text">修改 Next 主题的 Scheme</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#添加访问统计"><span class="nav-number">2.</span> <span class="nav-text">添加访问统计</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#添加头像"><span class="nav-number">3.</span> <span class="nav-text">添加头像</span></a></li></ol></div>
             
 
           </div>
