@@ -87,7 +87,7 @@
 <meta property="og:site_name" content="猎 日">
 <meta property="og:description" content="声明：本文为 ryanluoxu 原创文章，欢迎转载，请在明显位置注明出处。 搭建这个博客走了许多弯路。在这里分享总结之后的思路和简化步骤。  Github Pages Hexo 博客框架 部署 Next 主题  Github PagesGithub Pages 其实本身就是 Github 提供的博客服务。 我们在 Github 中创建一个特定格式的 Repository，Github Pages">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2017-11-26T06:22:59.896Z">
+<meta property="og:updated_time" content="2017-11-26T08:03:46.108Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="用 Hexo 和 GitHub Pages 搭建博客">
 <meta name="twitter:description" content="声明：本文为 ryanluoxu 原创文章，欢迎转载，请在明显位置注明出处。 搭建这个博客走了许多弯路。在这里分享总结之后的思路和简化步骤。  Github Pages Hexo 博客框架 部署 Next 主题  Github PagesGithub Pages 其实本身就是 Github 提供的博客服务。 我们在 Github 中创建一个特定格式的 Repository，Github Pages">
@@ -440,12 +440,7 @@
 <li><p>修改博客的配置文件 </p>
 <ul>
 <li>打开配置文件 /d/blog/_config.yml （使用 bash 里的 vi 或者 notepad++）</li>
-<li><p>找到 <code>#Deployment</code>，填入以下内容：</p>
-<pre><code>deploy:  
-  type: git  
-  repository: https://github.com/Ryanluoxu/ryanluoxu.github.io.git  
-  branch: master 
-</code></pre><p>保存退出</p>
+<li>找到 <code>#Deployment</code>，填入以下内容：<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">deploy:  </span><br><span class="line">	  type: git  </span><br><span class="line">	  repository: https://github.com/Ryanluoxu/ryanluoxu.github.io.git  </span><br><span class="line">	  branch: master</span><br></pre></td></tr></table></figure>
 </li>
 </ul>
 </li>
