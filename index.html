@@ -309,7 +309,7 @@
               
                 <span class="post-meta-item-text">Post modified&#58;</span>
               
-              <time title="Post modified" itemprop="dateModified" datetime="2017-11-28T07:36:50+08:00">
+              <time title="Post modified" itemprop="dateModified" datetime="2017-11-28T07:39:36+08:00">
                 2017-11-28
               </time>
             
@@ -390,12 +390,15 @@
 <h2 id="添加-Gitment-到博客"><a href="#添加-Gitment-到博客" class="headerlink" title="添加 Gitment 到博客"></a>添加 Gitment 到博客</h2><ol>
 <li>打开 D:\blog\themes\next_config.yml</li>
 <li>找到 <code>Gitment</code></li>
-<li>如下修改：<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">gitment:</span><br><span class="line">  enable: true</span><br><span class="line">  mint: true 		# RECOMMEND, A mint on Gitment, to support count, language and proxy_gateway</span><br><span class="line">  count: true 		# Show comments count in post meta area</span><br><span class="line">  lazy: false 		# Comments lazy loading with a button</span><br><span class="line">  cleanly: false 	# Hide &apos;Powered by ...&apos; on footer, and more</span><br><span class="line">  language: 		# Force language, or auto switch by theme</span><br><span class="line">  github_user: ryanluoxu 	# 此处 - Your Github ID</span><br><span class="line">  github_repo: gitment-comments # 此处注意 - The repo you use to store Gitment comments</span><br><span class="line">  client_id: xxxxxxxxxxxxxxxxxx # 此处 - Github client id for the Gitment</span><br><span class="line">  client_secret: xxxxxxxxxxxxx # 此处 - Github access secret token for the Gitment</span><br><span class="line">  proxy_gateway: # Address of api proxy, See: https://github.com/aimingoo/intersect</span><br><span class="line">  redirect_protocol: # Protocol of redirect_uri with force_redirect_protocol when mint enabled</span><br></pre></td></tr></table></figure>
+<li><p>如下修改：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">gitment:</span><br><span class="line">  enable: true</span><br><span class="line">  mint: true 		# RECOMMEND, A mint on Gitment, to support count, language and proxy_gateway</span><br><span class="line">  count: true 		# Show comments count in post meta area</span><br><span class="line">  lazy: false 		# Comments lazy loading with a button</span><br><span class="line">  cleanly: false 	# Hide &apos;Powered by ...&apos; on footer, and more</span><br><span class="line">  language: 		# Force language, or auto switch by theme</span><br><span class="line">  github_user: ryanluoxu 	# 此处 - Your Github ID</span><br><span class="line">  github_repo: gitment-comments # 此处注意 - The repo you use to store Gitment comments</span><br><span class="line">  client_id: xxxxxxxxxxxxxxxxxx # 此处 - Github client id for the Gitment</span><br><span class="line">  client_secret: xxxxxxxxxxxxx # 此处 - Github access secret token for the Gitment</span><br><span class="line">  proxy_gateway: # Address of api proxy, See: https://github.com/aimingoo/intersect</span><br><span class="line">  redirect_protocol: # Protocol of redirect_uri with force_redirect_protocol when mint enabled</span><br></pre></td></tr></table></figure>
 </li>
-</ol>
-<p>之后生成并且部署才会生效，本地没有效果 </p>
+<li><p>之后生成并且部署才会生效，本地有时没有效果 </p>
 <pre><code>hexo g -d
-</code></pre><p>部署之后，有可能碰到 <code>Not Found Error</code>，先不要着急，等一段时间再看看。</p>
+</code></pre><p> 部署之后，有可能碰到 <code>Not Found Error</code>，先不要着急，等一段时间再看看。</p>
+</li>
+<li>之后文章底部会出现 <code>初始化本文的评论页</code>，点击初始化。</li>
+</ol>
 
           
         
