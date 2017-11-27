@@ -491,7 +491,8 @@ tags: [博客，文章] #文章标签，只有一项时 tags: blog
   
     <div class="comments" id="comments">
       
-        <div id="gitment-container"></div>
+        <div onclick="showGitment()" id="gitment-display-button">Show comments from Gitment</div>
+        <div id="gitment-container" style="display:none"></div>
       
     </div>
 
@@ -855,7 +856,7 @@ tags: [博客，文章] #文章标签，只有一项时 tags: blog
       function renderGitment(){
         var gitment = new Gitmint({
             id: window.location.pathname, 
-            owner: '26059429',
+            owner: 'Ryanluoxu',
             repo: 'gitment-comments',
             
             lang: "" || navigator.language || navigator.systemLanguage || navigator.userLanguage,
@@ -871,7 +872,11 @@ tags: [博客，文章] #文章标签，只有一项时 tags: blog
       }
 
       
-      renderGitment();
+      function showGitment(){
+        document.getElementById("gitment-display-button").style.display = "none";
+        document.getElementById("gitment-container").style.display = "block";
+        renderGitment();
+      }
       
       </script>
     
