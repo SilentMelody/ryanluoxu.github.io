@@ -491,8 +491,7 @@ tags: [博客，文章] #文章标签，只有一项时 tags: blog
   
     <div class="comments" id="comments">
       
-        <div onclick="showGitment()" id="gitment-display-button">Show comments from Gitment</div>
-        <div id="gitment-container" style="display:none"></div>
+        <div id="gitment-container"></div>
       
     </div>
 
@@ -872,11 +871,7 @@ tags: [博客，文章] #文章标签，只有一项时 tags: blog
       }
 
       
-      function showGitment(){
-        document.getElementById("gitment-display-button").style.display = "none";
-        document.getElementById("gitment-container").style.display = "block";
-        renderGitment();
-      }
+      renderGitment();
       
       </script>
     
