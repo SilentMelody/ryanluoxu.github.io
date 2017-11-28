@@ -91,7 +91,7 @@
 <meta property="og:image" content="https://ryanluoxu.github.io/images/文章页面访问量.png">
 <meta property="og:image" content="https://ryanluoxu.github.io/images/添加页面之前.png">
 <meta property="og:image" content="https://ryanluoxu.github.io/images/添加页面之后.png">
-<meta property="og:updated_time" content="2017-11-28T13:50:35.527Z">
+<meta property="og:updated_time" content="2017-11-28T13:55:39.833Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Hexo 的 Next 主题优化">
 <meta name="twitter:description" content="声明：本文为 ryanluoxu 原创文章，欢迎转载，请在明显位置注明出处。 这篇博客用来记录和分享我对博客优化的过程，均为实际经历。欢迎纠正，与君共勉。 修改 Next 主题的 SchemeNext 默认的风格是 Muse。现有的四个风格里，我最喜欢 Gemini。因为此风格的博客首页里，每篇博客有明显的分割。菜单在左侧，方便访问时转到别的页面。   操作如下：  打开 D:\blog\them">
@@ -313,7 +313,7 @@
               
                 <span class="post-meta-item-text">Post modified&#58;</span>
               
-              <time title="Post modified" itemprop="dateModified" datetime="2017-11-28T21:50:35+08:00">
+              <time title="Post modified" itemprop="dateModified" datetime="2017-11-28T21:55:39+08:00">
                 2017-11-28
               </time>
             
@@ -443,13 +443,13 @@
 </ol>
 <p>没有深入研究，但应该是 <code>hasTagsPage</code> 没有实现，所以总是没有链接效果。所以给它加了一个 <code>else</code>   条件。就可以了。 </p>
 <h2 id="分类和标签页面的自动生成-categories-amp-tags"><a href="#分类和标签页面的自动生成-categories-amp-tags" class="headerlink" title="分类和标签页面的自动生成 categories &amp; tags"></a>分类和标签页面的自动生成 categories &amp; tags</h2><p>一开始我自己手动添加了这两个页面的内容，后来无意看到了正确的打开方式：<a href="http://theme-next.iissnan.com/theme-settings.html" target="_blank" rel="noopener">主题配置</a><br>很简单，分别加上 type 就可以了。</p>
-<p>分类页面：</p>
+<p><strong>分类页面：</strong></p>
 <ol>
 <li>打开 D:\blog\source\categories\index.md</li>
 <li>内容如下：<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">---</span><br><span class="line">title: categories</span><br><span class="line">date: 2017-11-26 18:38:13</span><br><span class="line">type: &quot;categories&quot;</span><br><span class="line">---</span><br></pre></td></tr></table></figure>
 </li>
 </ol>
-<p>标签页面：</p>
+<p><strong>标签页面：</strong></p>
 <ol>
 <li>打开 D:\blog\source\tags\index.md</li>
 <li>内容如下：<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">---</span><br><span class="line">title: tags</span><br><span class="line">date: 2017-11-26 18:38:13</span><br><span class="line">type: &quot;tags&quot;</span><br><span class="line">---</span><br></pre></td></tr></table></figure>
