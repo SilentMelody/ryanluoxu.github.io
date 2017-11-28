@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="Linux,SSH,SCP,password,server," />
 
 
 
@@ -79,17 +79,18 @@
 
 
 
-<meta name="description" content="Share anything I have on programming">
-<meta property="og:type" content="website">
-<meta property="og:title" content="categories">
-<meta property="og:url" content="https://ryanluoxu.github.io/categories/index.html">
+<meta name="description" content="有这样一个任务: 将同事发送的原始数据处理好之后，放进数据库。其中一个关键的步骤，就是原始数据的转移。 通常我们有两个服务器，一个是 Public_Server，一个是 Private_Server。公开 Public_Server 的用户名和密码，这样其他同事都可以自由地往里面存放数据。然后我们操作 Private_">
+<meta name="keywords" content="Linux,SSH,SCP,password,server">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Linux - SSH or SCP without password">
+<meta property="og:url" content="https://ryanluoxu.github.io/2017/11/28/Linux-SSH-or-SCP-without-password/index.html">
 <meta property="og:site_name" content="猎 日">
-<meta property="og:description" content="Share anything I have on programming">
+<meta property="og:description" content="有这样一个任务: 将同事发送的原始数据处理好之后，放进数据库。其中一个关键的步骤，就是原始数据的转移。 通常我们有两个服务器，一个是 Public_Server，一个是 Private_Server。公开 Public_Server 的用户名和密码，这样其他同事都可以自由地往里面存放数据。然后我们操作 Private_Server 来获取那些数据，再进一步处理。 好处：  保护处理数据的程序和数据">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2017-11-28T13:52:55.037Z">
+<meta property="og:updated_time" content="2017-11-28T15:51:42.156Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="categories">
-<meta name="twitter:description" content="Share anything I have on programming">
+<meta name="twitter:title" content="Linux - SSH or SCP without password">
+<meta name="twitter:description" content="有这样一个任务: 将同事发送的原始数据处理好之后，放进数据库。其中一个关键的步骤，就是原始数据的转移。 通常我们有两个服务器，一个是 Public_Server，一个是 Private_Server。公开 Public_Server 的用户名和密码，这样其他同事都可以自由地往里面存放数据。然后我们操作 Private_Server 来获取那些数据，再进一步处理。 好处：  保护处理数据的程序和数据">
 
 
 
@@ -119,13 +120,13 @@
 
 
 
-  <link rel="canonical" href="https://ryanluoxu.github.io/categories/"/>
+  <link rel="canonical" href="https://ryanluoxu.github.io/2017/11/28/Linux-SSH-or-SCP-without-password/"/>
 
 
 
 
 
-  <title>categories | 猎 日</title>
+  <title>Linux - SSH or SCP without password | 猎 日</title>
   
 
 
@@ -260,40 +261,257 @@
 
   <div id="posts" class="posts-expand">
     
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://ryanluoxu.github.io/2017/11/28/Linux-SSH-or-SCP-without-password/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Ryan Luo Xu 罗旭">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar1.JPG">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="猎 日">
+    </span>
+
     
-    
-    <div class="post-block page">
       <header class="post-header">
 
-	<h1 class="post-title" itemprop="name headline">categories</h1>
-
-
-
-</header>
-
-      
-      
-      
-      <div class="post-body">
         
         
-          <div class="category-all-page">
-            <div class="category-all-title">
-                4 categories in total
-            </div>
-            <div class="category-all">
-              <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Git/">Git</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Linux/">Linux</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Notes/">Notes</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/搭建博客/">搭建博客</a><span class="category-list-count">3</span></li></ul>
-            </div>
-          </div>
+          <h1 class="post-title" itemprop="name headline">Linux - SSH or SCP without password</h1>
         
-      </div>
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-11-28T23:24:20+08:00">
+                2017-11-28
+              </time>
+            
+
+            
+              <span class="post-meta-divider">|</span>
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-check-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Post modified&#58;</span>
+              
+              <time title="Post modified" itemprop="dateModified" datetime="2017-11-28T23:51:42+08:00">
+                2017-11-28
+              </time>
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Linux/" itemprop="url" rel="index">
+                    <span itemprop="name">Linux</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2017/11/28/Linux-SSH-or-SCP-without-password/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count gitment-comments-count" data-xid="/2017/11/28/Linux-SSH-or-SCP-without-password/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+            <span class="post-meta-divider">|</span>
+            <span class="page-pv"><i class="fa fa-file-o"></i> View
+            <span class="busuanzi-value" id="busuanzi_value_page_pv" ></span>
+            </span>
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
       
       
+
+      
+        <p>有这样一个任务: 将同事发送的原始数据处理好之后，放进数据库。<br>其中一个关键的步骤，就是原始数据的转移。</p>
+<p>通常我们有两个服务器，一个是 Public_Server，一个是 Private_Server。<br>公开 Public_Server 的用户名和密码，这样其他同事都可以自由地往里面存放数据。<br>然后我们操作 Private_Server 来获取那些数据，再进一步处理。</p>
+<p>好处：</p>
+<ul>
+<li>保护处理数据的程序和数据库</li>
+<li>有时需要换服务器，避免通知所有人更新服务器的地址和登录信息</li>
+<li>Public_Server 就像一个保护屏，做了一个分割，提高了安全性。</li>
+</ul>
+<p>转移数据，作为整个工序里很小的一个步骤，通常我们会直接写进一个脚本里，这部分都会自动完成。<br>但是在服务器之间做这个操作，会需要提供密码，此时，整个脚本程序就会停下来。如果需要人来输入密码，就失去了脚本的意义了。</p>
+
       
     </div>
     
     
     
+	
+	<div>
+      
+        
+      
+	</div>
+
+    
+
+    
+      <div>
+        <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
+  <div>土豪专用</div>
+  <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+    <span>Donate</span>
+  </button>
+  <div id="QR" style="display: none;">
+
+    
+      <div id="wechat" style="display: inline-block">
+        <img id="wechat_qr" src="/images/微信打赏.png" alt="Ryan Luo Xu 罗旭 WeChat Pay"/>
+        <p>WeChat Pay</p>
+      </div>
+    
+
+    
+
+    
+
+  </div>
+</div>
+
+      </div>
+    
+
+    
+      <div>
+        <ul class="post-copyright">
+  <li class="post-copyright-author">
+    <strong>Post author:</strong>
+    Ryan Luo Xu 罗旭
+  </li>
+  <li class="post-copyright-link">
+    <strong>Post link:</strong>
+    <a href="https://ryanluoxu.github.io/2017/11/28/Linux-SSH-or-SCP-without-password/" title="Linux - SSH or SCP without password">https://ryanluoxu.github.io/2017/11/28/Linux-SSH-or-SCP-without-password/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>Copyright Notice: </strong>
+    All articles in this blog are licensed under <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/" rel="external nofollow" target="_blank">CC BY-NC-SA 3.0</a> unless stating additionally. 转载请注明出处。
+  </li>
+</ul>
+
+      </div>
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/Linux/" rel="tag"># Linux</a>
+          
+            <a href="/tags/SSH/" rel="tag"># SSH</a>
+          
+            <a href="/tags/SCP/" rel="tag"># SCP</a>
+          
+            <a href="/tags/password/" rel="tag"># password</a>
+          
+            <a href="/tags/server/" rel="tag"># server</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2017/11/27/Hexo-Next-添加-Gitment-评论系统/" rel="next" title="Hexo-Next 添加 Gitment 评论系统">
+                <i class="fa fa-chevron-left"></i> Hexo-Next 添加 Gitment 评论系统
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
   </div>
 
 
@@ -302,6 +520,17 @@
 
 
           
+
+  
+    <div class="comments" id="comments">
+      
+        <div id="gitment-container"></div>
+      
+    </div>
+
+  
+
+
 
         </div>
         
@@ -629,6 +858,30 @@
 
     
 
+    
+      <script type="text/javascript">
+      function renderGitment(){
+        var gitment = new Gitmint({
+            id: window.location.pathname, 
+            owner: 'Ryanluoxu',
+            repo: 'gitment-comments',
+            
+            lang: "" || navigator.language || navigator.systemLanguage || navigator.userLanguage,
+            
+            oauth: {
+            
+            
+                client_secret: '86e751e15567e1af27d173720c74f969bb8d73c0',
+            
+                client_id: '478df3241d7aa56819e0'
+            }});
+        gitment.render('gitment-container');
+      }
+
+      
+      renderGitment();
+      
+      </script>
     
 
 
