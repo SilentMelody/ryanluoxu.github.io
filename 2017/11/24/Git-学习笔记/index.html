@@ -79,19 +79,19 @@
 
 
 
-<meta name="description" content="声明：本文为 ryanluoxu 原创文章，欢迎转载，请在明显位置注明出处。 文件的三种状态 已修改 modified ： 对某个文件进行修改，保存完成。 已暂存 staged ： 执行 git add 之后 已提交 committed ： 执行 git commit 之后  这里的提交目的地，是本地 reposito">
+<meta name="description" content="声明：本文为 ryanluoxu 原创文章，欢迎转载，请在明显位置注明出处。 学习素材：Pro Git Git 基础文件的三种状态 已修改 modified ： 对某个文件进行修改，保存完成。 已暂存 staged ： 执行 git add 之后 已提交 committed ： 执行 git commit 之后  这里">
 <meta name="keywords" content="Git,学习笔记">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Git - 学习笔记">
 <meta property="og:url" content="https://ryanluoxu.github.io/2017/11/24/Git-学习笔记/index.html">
 <meta property="og:site_name" content="猎 日">
-<meta property="og:description" content="声明：本文为 ryanluoxu 原创文章，欢迎转载，请在明显位置注明出处。 文件的三种状态 已修改 modified ： 对某个文件进行修改，保存完成。 已暂存 staged ： 执行 git add 之后 已提交 committed ： 执行 git commit 之后  这里的提交目的地，是本地 repository。常用的 github 为 remote repository。如果需要将本">
+<meta property="og:description" content="声明：本文为 ryanluoxu 原创文章，欢迎转载，请在明显位置注明出处。 学习素材：Pro Git Git 基础文件的三种状态 已修改 modified ： 对某个文件进行修改，保存完成。 已暂存 staged ： 执行 git add 之后 已提交 committed ： 执行 git commit 之后  这里的提交目的地，是本地 repository。常用的 github 为 remot">
 <meta property="og:locale" content="en">
 <meta property="og:image" content="https://ryanluoxu.github.io/images/本地修改-github的流程图.jpg">
-<meta property="og:updated_time" content="2017-11-26T06:59:11.496Z">
+<meta property="og:updated_time" content="2017-12-01T21:45:16.643Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Git - 学习笔记">
-<meta name="twitter:description" content="声明：本文为 ryanluoxu 原创文章，欢迎转载，请在明显位置注明出处。 文件的三种状态 已修改 modified ： 对某个文件进行修改，保存完成。 已暂存 staged ： 执行 git add 之后 已提交 committed ： 执行 git commit 之后  这里的提交目的地，是本地 repository。常用的 github 为 remote repository。如果需要将本">
+<meta name="twitter:description" content="声明：本文为 ryanluoxu 原创文章，欢迎转载，请在明显位置注明出处。 学习素材：Pro Git Git 基础文件的三种状态 已修改 modified ： 对某个文件进行修改，保存完成。 已暂存 staged ： 执行 git add 之后 已提交 committed ： 执行 git commit 之后  这里的提交目的地，是本地 repository。常用的 github 为 remot">
 <meta name="twitter:image" content="https://ryanluoxu.github.io/images/本地修改-github的流程图.jpg">
 
 
@@ -320,8 +320,8 @@
               
                 <span class="post-meta-item-text">Post modified&#58;</span>
               
-              <time title="Post modified" itemprop="dateModified" datetime="2017-11-26T14:59:11+08:00">
-                2017-11-26
+              <time title="Post modified" itemprop="dateModified" datetime="2017-12-02T05:45:16+08:00">
+                2017-12-02
               </time>
             
           </span>
@@ -392,7 +392,8 @@
 
       
         <p><strong>声明：本文为 ryanluoxu 原创文章，欢迎转载，请在明显位置注明出处。</strong></p>
-<h3 id="文件的三种状态"><a href="#文件的三种状态" class="headerlink" title="文件的三种状态"></a>文件的三种状态</h3><ul>
+<p>学习素材：<a href="https://bingohuang.gitbooks.io/progit2/content/02-git-basics/sections/getting-a-repository.html" target="_blank" rel="noopener">Pro Git</a></p>
+<h2 id="Git-基础"><a href="#Git-基础" class="headerlink" title="Git 基础"></a>Git 基础</h2><h3 id="文件的三种状态"><a href="#文件的三种状态" class="headerlink" title="文件的三种状态"></a>文件的三种状态</h3><ul>
 <li>已修改 modified ： 对某个文件进行修改，保存完成。</li>
 <li>已暂存 staged ： 执行 <code>git add</code> 之后</li>
 <li>已提交 committed ： 执行 <code>git commit</code> 之后</li>
@@ -401,6 +402,18 @@
 <p>所以对本地文件进行修改，到同步到 github，基本流程如下：   </p>
 <p><img src="/images/本地修改-github的流程图.jpg" alt="本地修改-github的流程图"></p>
 <a id="more"></a>
+<h3 id="获取-Git-Repository"><a href="#获取-Git-Repository" class="headerlink" title="获取 Git Repository"></a>获取 Git Repository</h3><p>两种方法：</p>
+<ol>
+<li><p>初始现有文件夹 </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git init</span><br></pre></td></tr></table></figure>
+<p> 初始后的文件夹里多了一个 .git 的文件夹，这就是本地 repository。</p>
+</li>
+<li><p>克隆已有的 Remote Repository</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git clone https://github.com/Ryanluoxu/learn_linux.git</span><br></pre></td></tr></table></figure>
+<p> 会在当前文件夹里生成 <code>learn_linux</code> 文件夹。里面也有 .git 文件夹作为本地 repository。 Remote repository 里的内容先进入到本地 repository，然后才到 <code>learn_linux</code> 文件夹。</p>
+</li>
+</ol>
+
       
     </div>
     
@@ -667,7 +680,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#文件的三种状态"><span class="nav-number">1.</span> <span class="nav-text">文件的三种状态</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Git-基础"><span class="nav-number">1.</span> <span class="nav-text">Git 基础</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#文件的三种状态"><span class="nav-number">1.1.</span> <span class="nav-text">文件的三种状态</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#获取-Git-Repository"><span class="nav-number">1.2.</span> <span class="nav-text">获取 Git Repository</span></a></li></ol></li></ol></div>
             
 
           </div>
