@@ -85,14 +85,15 @@
 <meta property="og:title" content="Git - 学习笔记">
 <meta property="og:url" content="https://ryanluoxu.github.io/2017/11/24/Git-学习笔记/index.html">
 <meta property="og:site_name" content="猎 日">
-<meta property="og:description" content="声明：本文为 ryanluoxu 原创文章，欢迎转载，请在明显位置注明出处。 学习素材：Pro Git 常用指令1234git add		#添加到下一次的提交中。git status -s	#状态简览git diff --staged	##暂存区域 - 本地 Repogit commit -a -m &apos;comment&apos;	#跳过git add Git 基础">
+<meta property="og:description" content="声明：本文为 ryanluoxu 原创文章，欢迎转载，请在明显位置注明出处。 学习素材：Pro Git 常用指令1234git add		#添加到下一次的提交中。git status -s	#状态简览git diff --staged	##暂存区域 - 本地 Repogit commit -a -m &apos;comment&apos;	#跳过git add Git 周期">
 <meta property="og:locale" content="en">
+<meta property="og:image" content="https://ryanluoxu.github.io/images/Git%20周期.png">
 <meta property="og:image" content="https://ryanluoxu.github.io/images/本地修改-github的流程图.jpg">
-<meta property="og:updated_time" content="2017-12-03T05:38:26.861Z">
+<meta property="og:updated_time" content="2017-12-03T15:40:59.010Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Git - 学习笔记">
-<meta name="twitter:description" content="声明：本文为 ryanluoxu 原创文章，欢迎转载，请在明显位置注明出处。 学习素材：Pro Git 常用指令1234git add		#添加到下一次的提交中。git status -s	#状态简览git diff --staged	##暂存区域 - 本地 Repogit commit -a -m &apos;comment&apos;	#跳过git add Git 基础">
-<meta name="twitter:image" content="https://ryanluoxu.github.io/images/本地修改-github的流程图.jpg">
+<meta name="twitter:description" content="声明：本文为 ryanluoxu 原创文章，欢迎转载，请在明显位置注明出处。 学习素材：Pro Git 常用指令1234git add		#添加到下一次的提交中。git status -s	#状态简览git diff --staged	##暂存区域 - 本地 Repogit commit -a -m &apos;comment&apos;	#跳过git add Git 周期">
+<meta name="twitter:image" content="https://ryanluoxu.github.io/images/Git%20周期.png">
 
 
 
@@ -320,7 +321,7 @@
               
                 <span class="post-meta-item-text">Post modified&#58;</span>
               
-              <time title="Post modified" itemprop="dateModified" datetime="2017-12-03T13:38:26+08:00">
+              <time title="Post modified" itemprop="dateModified" datetime="2017-12-03T23:40:59+08:00">
                 2017-12-03
               </time>
             
@@ -394,10 +395,11 @@
         <p><strong>声明：本文为 ryanluoxu 原创文章，欢迎转载，请在明显位置注明出处。</strong></p>
 <p>学习素材：<a href="https://bingohuang.gitbooks.io/progit2/content/02-git-basics/sections/getting-a-repository.html" target="_blank" rel="noopener">Pro Git</a></p>
 <h1 id="常用指令"><a href="#常用指令" class="headerlink" title="常用指令"></a>常用指令</h1><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">git add		<span class="comment">#添加到下一次的提交中。</span></span><br><span class="line">git status -s	<span class="comment">#状态简览</span></span><br><span class="line">git diff --staged	<span class="comment">##暂存区域 - 本地 Repo</span></span><br><span class="line">git commit -a -m <span class="string">'comment'</span>	<span class="comment">#跳过git add</span></span><br></pre></td></tr></table></figure>
-<h1 id="Git-基础"><a href="#Git-基础" class="headerlink" title="Git 基础"></a>Git 基础</h1><a id="more"></a>
-<h2 id="获取-Git-Repository"><a href="#获取-Git-Repository" class="headerlink" title="获取 Git Repository"></a>获取 Git Repository</h2><p>两种方法：</p>
+<p>Git 周期<br><img src="/images/Git 周期.png" alt="Git 周期"></p>
+<a id="more"></a>
+<h1 id="Git-基础"><a href="#Git-基础" class="headerlink" title="Git 基础"></a>Git 基础</h1><h2 id="获取-Git-仓库"><a href="#获取-Git-仓库" class="headerlink" title="获取 Git 仓库"></a>获取 Git 仓库</h2><p>两种方法：</p>
 <ol>
-<li><p>初始现有文件夹 </p>
+<li><p>初始现有文件夹    </p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git init</span><br></pre></td></tr></table></figure>
 <p> 初始后的文件夹里多了一个 .git 的文件夹，这就是本地 repository。</p>
 </li>
@@ -420,7 +422,11 @@
 <h3 id="git-diff"><a href="#git-diff" class="headerlink" title="git diff"></a>git diff</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git diff			<span class="comment">#本地文件 - 暂存区域</span></span><br><span class="line">git diff --staged	<span class="comment">#暂存区域 - 本地 Repo</span></span><br></pre></td></tr></table></figure>
 <h3 id="git-commit"><a href="#git-commit" class="headerlink" title="git commit"></a>git commit</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git commit -m <span class="string">"Story 182: Fix benchmarks for speed"</span></span><br></pre></td></tr></table></figure>
 <p>跳过 <code>git add</code>， 把所有跟踪下的文件暂存，然后提交。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git commit -a -m <span class="string">'added new benchmarks'</span></span><br></pre></td></tr></table></figure></p>
-<h2 id="移除文件"><a href="#移除文件" class="headerlink" title="移除文件"></a>移除文件</h2>
+<h2 id="远程仓库"><a href="#远程仓库" class="headerlink" title="远程仓库"></a>远程仓库</h2><p>查看已经配置的远程仓库服务器:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git remote -v</span><br></pre></td></tr></table></figure></p>
+<p>添加远程 Git 仓库:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git remote add &lt;shortname&gt; &lt;url&gt;</span><br></pre></td></tr></table></figure></p>
+<p>抓取：从远程仓库中获得数据,放到本地仓库：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git fetch [remote-name]</span><br></pre></td></tr></table></figure></p>
+<p>拉取：从远程仓库中获得数据，然后合并到当前分支：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git pull</span><br></pre></td></tr></table></figure></p>
+
       
     </div>
     
@@ -687,7 +693,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#常用指令"><span class="nav-number">1.</span> <span class="nav-text">常用指令</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Git-基础"><span class="nav-number">2.</span> <span class="nav-text">Git 基础</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#获取-Git-Repository"><span class="nav-number">2.1.</span> <span class="nav-text">获取 Git Repository</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#提交文件"><span class="nav-number">2.2.</span> <span class="nav-text">提交文件</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#文件的三种状态"><span class="nav-number">2.2.1.</span> <span class="nav-text">文件的三种状态</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#git-status"><span class="nav-number">2.2.2.</span> <span class="nav-text">git status</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#git-ignore"><span class="nav-number">2.2.3.</span> <span class="nav-text">git ignore</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#git-diff"><span class="nav-number">2.2.4.</span> <span class="nav-text">git diff</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#git-commit"><span class="nav-number">2.2.5.</span> <span class="nav-text">git commit</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#移除文件"><span class="nav-number">2.3.</span> <span class="nav-text">移除文件</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#常用指令"><span class="nav-number">1.</span> <span class="nav-text">常用指令</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Git-基础"><span class="nav-number">2.</span> <span class="nav-text">Git 基础</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#获取-Git-仓库"><span class="nav-number">2.1.</span> <span class="nav-text">获取 Git 仓库</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#提交文件"><span class="nav-number">2.2.</span> <span class="nav-text">提交文件</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#文件的三种状态"><span class="nav-number">2.2.1.</span> <span class="nav-text">文件的三种状态</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#git-status"><span class="nav-number">2.2.2.</span> <span class="nav-text">git status</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#git-ignore"><span class="nav-number">2.2.3.</span> <span class="nav-text">git ignore</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#git-diff"><span class="nav-number">2.2.4.</span> <span class="nav-text">git diff</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#git-commit"><span class="nav-number">2.2.5.</span> <span class="nav-text">git commit</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#远程仓库"><span class="nav-number">2.3.</span> <span class="nav-text">远程仓库</span></a></li></ol></li></ol></div>
             
 
           </div>
