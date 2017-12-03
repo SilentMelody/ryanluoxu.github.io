@@ -79,19 +79,19 @@
 
 
 
-<meta name="description" content="声明：本文为 ryanluoxu 原创文章，欢迎转载，请在明显位置注明出处。 学习素材：Pro Git Git 基础文件的三种状态 已修改 modified ： 对某个文件进行修改，保存完成。 已暂存 staged ： 执行 git add 之后 已提交 committed ： 执行 git commit 之后  这里">
+<meta name="description" content="声明：本文为 ryanluoxu 原创文章，欢迎转载，请在明显位置注明出处。 学习素材：Pro Git 常用指令1234git add		#添加到下一次的提交中。git status -s	#状态简览git diff --staged	##暂存区域 - 本地 Repogit commit -a -m &apos;com">
 <meta name="keywords" content="Git,学习笔记">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Git - 学习笔记">
 <meta property="og:url" content="https://ryanluoxu.github.io/2017/11/24/Git-学习笔记/index.html">
 <meta property="og:site_name" content="猎 日">
-<meta property="og:description" content="声明：本文为 ryanluoxu 原创文章，欢迎转载，请在明显位置注明出处。 学习素材：Pro Git Git 基础文件的三种状态 已修改 modified ： 对某个文件进行修改，保存完成。 已暂存 staged ： 执行 git add 之后 已提交 committed ： 执行 git commit 之后  这里的提交目的地，是本地 repository。常用的 github 为 remot">
+<meta property="og:description" content="声明：本文为 ryanluoxu 原创文章，欢迎转载，请在明显位置注明出处。 学习素材：Pro Git 常用指令1234git add		#添加到下一次的提交中。git status -s	#状态简览git diff --staged	##暂存区域 - 本地 Repogit commit -a -m &apos;comment&apos;	#跳过git add Git 基础">
 <meta property="og:locale" content="en">
 <meta property="og:image" content="https://ryanluoxu.github.io/images/本地修改-github的流程图.jpg">
-<meta property="og:updated_time" content="2017-12-01T21:45:16.643Z">
+<meta property="og:updated_time" content="2017-12-03T05:38:26.861Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Git - 学习笔记">
-<meta name="twitter:description" content="声明：本文为 ryanluoxu 原创文章，欢迎转载，请在明显位置注明出处。 学习素材：Pro Git Git 基础文件的三种状态 已修改 modified ： 对某个文件进行修改，保存完成。 已暂存 staged ： 执行 git add 之后 已提交 committed ： 执行 git commit 之后  这里的提交目的地，是本地 repository。常用的 github 为 remot">
+<meta name="twitter:description" content="声明：本文为 ryanluoxu 原创文章，欢迎转载，请在明显位置注明出处。 学习素材：Pro Git 常用指令1234git add		#添加到下一次的提交中。git status -s	#状态简览git diff --staged	##暂存区域 - 本地 Repogit commit -a -m &apos;comment&apos;	#跳过git add Git 基础">
 <meta name="twitter:image" content="https://ryanluoxu.github.io/images/本地修改-github的流程图.jpg">
 
 
@@ -320,8 +320,8 @@
               
                 <span class="post-meta-item-text">Post modified&#58;</span>
               
-              <time title="Post modified" itemprop="dateModified" datetime="2017-12-02T05:45:16+08:00">
-                2017-12-02
+              <time title="Post modified" itemprop="dateModified" datetime="2017-12-03T13:38:26+08:00">
+                2017-12-03
               </time>
             
           </span>
@@ -393,16 +393,9 @@
       
         <p><strong>声明：本文为 ryanluoxu 原创文章，欢迎转载，请在明显位置注明出处。</strong></p>
 <p>学习素材：<a href="https://bingohuang.gitbooks.io/progit2/content/02-git-basics/sections/getting-a-repository.html" target="_blank" rel="noopener">Pro Git</a></p>
-<h2 id="Git-基础"><a href="#Git-基础" class="headerlink" title="Git 基础"></a>Git 基础</h2><h3 id="文件的三种状态"><a href="#文件的三种状态" class="headerlink" title="文件的三种状态"></a>文件的三种状态</h3><ul>
-<li>已修改 modified ： 对某个文件进行修改，保存完成。</li>
-<li>已暂存 staged ： 执行 <code>git add</code> 之后</li>
-<li>已提交 committed ： 执行 <code>git commit</code> 之后</li>
-</ul>
-<p>这里的提交目的地，是本地 repository。<br>常用的 github 为 remote repository。<br>如果需要将本地 repository 同步到 github 上，需要执行 <code>git push</code>。    </p>
-<p>所以对本地文件进行修改，到同步到 github，基本流程如下：   </p>
-<p><img src="/images/本地修改-github的流程图.jpg" alt="本地修改-github的流程图"></p>
-<a id="more"></a>
-<h3 id="获取-Git-Repository"><a href="#获取-Git-Repository" class="headerlink" title="获取 Git Repository"></a>获取 Git Repository</h3><p>两种方法：</p>
+<h1 id="常用指令"><a href="#常用指令" class="headerlink" title="常用指令"></a>常用指令</h1><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">git add		<span class="comment">#添加到下一次的提交中。</span></span><br><span class="line">git status -s	<span class="comment">#状态简览</span></span><br><span class="line">git diff --staged	<span class="comment">##暂存区域 - 本地 Repo</span></span><br><span class="line">git commit -a -m <span class="string">'comment'</span>	<span class="comment">#跳过git add</span></span><br></pre></td></tr></table></figure>
+<h1 id="Git-基础"><a href="#Git-基础" class="headerlink" title="Git 基础"></a>Git 基础</h1><a id="more"></a>
+<h2 id="获取-Git-Repository"><a href="#获取-Git-Repository" class="headerlink" title="获取 Git Repository"></a>获取 Git Repository</h2><p>两种方法：</p>
 <ol>
 <li><p>初始现有文件夹 </p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git init</span><br></pre></td></tr></table></figure>
@@ -413,7 +406,21 @@
 <p> 会在当前文件夹里生成 <code>learn_linux</code> 文件夹。里面也有 .git 文件夹作为本地 repository。 Remote repository 里的内容先进入到本地 repository，然后才到 <code>learn_linux</code> 文件夹。</p>
 </li>
 </ol>
-
+<h2 id="提交文件"><a href="#提交文件" class="headerlink" title="提交文件"></a>提交文件</h2><h3 id="文件的三种状态"><a href="#文件的三种状态" class="headerlink" title="文件的三种状态"></a>文件的三种状态</h3><ul>
+<li>已修改 modified ： 对某个文件进行修改，保存完成。</li>
+<li>已暂存 staged ： 执行 <code>git add</code> 之后</li>
+<li>已提交 committed ： 执行 <code>git commit</code> 之后</li>
+</ul>
+<p>这里的提交目的地，是本地 repository。<br>常用的 github 为 remote repository。<br>如果需要将本地 repository 同步到 github 上，需要执行 <code>git push</code>。    </p>
+<p>所以对本地文件进行修改，到同步到 github，基本流程如下：   </p>
+<p><img src="/images/本地修改-github的流程图.jpg" alt="本地修改-github的流程图"></p>
+<h3 id="git-status"><a href="#git-status" class="headerlink" title="git status"></a>git status</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git status</span><br><span class="line">git status -s	#状态简览</span><br></pre></td></tr></table></figure>
+<p>举例：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"> M README			<span class="comment">#文件被修改了但是还没放入暂存区</span></span><br><span class="line">MM Rakefile			<span class="comment">#文件被修改，放入了暂存区之后。该文件又被修改。</span></span><br><span class="line">A  lib				<span class="comment">#新添加到暂存区中的文件</span></span><br><span class="line">M  simple.txt		<span class="comment">#文件被修改了并放入了暂存区</span></span><br><span class="line">?? LICENSE.txt		<span class="comment">#新添加的未跟踪文件</span></span><br></pre></td></tr></table></figure></p>
+<h3 id="git-ignore"><a href="#git-ignore" class="headerlink" title="git ignore"></a>git ignore</h3><p>创建一个名为 <code>.gitignore</code> 的文件，列出要忽略的文件模式。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># no .a files</span></span><br><span class="line">*.a</span><br><span class="line"></span><br><span class="line"><span class="comment"># but do track lib.a, even though you're ignoring .a files above</span></span><br><span class="line">!lib.a</span><br><span class="line"></span><br><span class="line"><span class="comment"># only ignore the TODO file in the current directory, not subdir/TODO</span></span><br><span class="line">/TODO</span><br><span class="line"></span><br><span class="line"><span class="comment"># ignore all files in the build/ directory</span></span><br><span class="line">build/</span><br><span class="line"></span><br><span class="line"><span class="comment"># ignore doc/notes.txt, but not doc/server/arch.txt</span></span><br><span class="line">doc/*.txt</span><br><span class="line"></span><br><span class="line"><span class="comment"># ignore all .pdf files in the doc/ directory</span></span><br><span class="line">doc/**/*.pdf</span><br></pre></td></tr></table></figure></p>
+<h3 id="git-diff"><a href="#git-diff" class="headerlink" title="git diff"></a>git diff</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git diff			<span class="comment">#本地文件 - 暂存区域</span></span><br><span class="line">git diff --staged	<span class="comment">#暂存区域 - 本地 Repo</span></span><br></pre></td></tr></table></figure>
+<h3 id="git-commit"><a href="#git-commit" class="headerlink" title="git commit"></a>git commit</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git commit -m <span class="string">"Story 182: Fix benchmarks for speed"</span></span><br></pre></td></tr></table></figure>
+<p>跳过 <code>git add</code>， 把所有跟踪下的文件暂存，然后提交。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git commit -a -m <span class="string">'added new benchmarks'</span></span><br></pre></td></tr></table></figure></p>
+<h2 id="移除文件"><a href="#移除文件" class="headerlink" title="移除文件"></a>移除文件</h2>
       
     </div>
     
@@ -680,7 +687,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Git-基础"><span class="nav-number">1.</span> <span class="nav-text">Git 基础</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#文件的三种状态"><span class="nav-number">1.1.</span> <span class="nav-text">文件的三种状态</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#获取-Git-Repository"><span class="nav-number">1.2.</span> <span class="nav-text">获取 Git Repository</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#常用指令"><span class="nav-number">1.</span> <span class="nav-text">常用指令</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Git-基础"><span class="nav-number">2.</span> <span class="nav-text">Git 基础</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#获取-Git-Repository"><span class="nav-number">2.1.</span> <span class="nav-text">获取 Git Repository</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#提交文件"><span class="nav-number">2.2.</span> <span class="nav-text">提交文件</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#文件的三种状态"><span class="nav-number">2.2.1.</span> <span class="nav-text">文件的三种状态</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#git-status"><span class="nav-number">2.2.2.</span> <span class="nav-text">git status</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#git-ignore"><span class="nav-number">2.2.3.</span> <span class="nav-text">git ignore</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#git-diff"><span class="nav-number">2.2.4.</span> <span class="nav-text">git diff</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#git-commit"><span class="nav-number">2.2.5.</span> <span class="nav-text">git commit</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#移除文件"><span class="nav-number">2.3.</span> <span class="nav-text">移除文件</span></a></li></ol></li></ol></div>
             
 
           </div>
