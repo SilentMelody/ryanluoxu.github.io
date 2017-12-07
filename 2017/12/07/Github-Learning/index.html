@@ -79,18 +79,18 @@
 
 
 
-<meta name="description" content="git push without entering username &amp;amp; passwordThis is because using HTTPS to clone the repo.Change to SSH:">
+<meta name="description" content="Switching remote URLs between SSH and HTTPSCheck existing remote:  If SSH: 123$ git remote -vorigin  git@github.com:USERNAME/REPOSITORY.git (fetch)origin  git@g">
 <meta name="keywords" content="github,git,notes">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Github Learning">
 <meta property="og:url" content="https://ryanluoxu.github.io/2017/12/07/Github-Learning/index.html">
 <meta property="og:site_name" content="猎 日">
-<meta property="og:description" content="git push without entering username &amp;amp; passwordThis is because using HTTPS to clone the repo.Change to SSH:">
+<meta property="og:description" content="Switching remote URLs between SSH and HTTPSCheck existing remote:  If SSH: 123$ git remote -vorigin  git@github.com:USERNAME/REPOSITORY.git (fetch)origin  git@github.com:USERNAME/REPOSITORY.git (push)">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2017-12-07T04:04:16.302Z">
+<meta property="og:updated_time" content="2017-12-07T08:03:53.105Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Github Learning">
-<meta name="twitter:description" content="git push without entering username &amp;amp; passwordThis is because using HTTPS to clone the repo.Change to SSH:">
+<meta name="twitter:description" content="Switching remote URLs between SSH and HTTPSCheck existing remote:  If SSH: 123$ git remote -vorigin  git@github.com:USERNAME/REPOSITORY.git (fetch)origin  git@github.com:USERNAME/REPOSITORY.git (push)">
 
 
 
@@ -318,7 +318,7 @@
               
                 <span class="post-meta-item-text">Post modified&#58;</span>
               
-              <time title="Post modified" itemprop="dateModified" datetime="2017-12-07T12:04:16+08:00">
+              <time title="Post modified" itemprop="dateModified" datetime="2017-12-07T16:03:53+08:00">
                 2017-12-07
               </time>
             
@@ -389,31 +389,23 @@
       
 
       
-        <h2 id="git-push-without-entering-username-amp-password"><a href="#git-push-without-entering-username-amp-password" class="headerlink" title="git push without entering username &amp; password"></a>git push without entering username &amp; password</h2><p>This is because using HTTPS to clone the repo.<br>Change to SSH:</p>
+        <h2 id="Switching-remote-URLs-between-SSH-and-HTTPS"><a href="#Switching-remote-URLs-between-SSH-and-HTTPS" class="headerlink" title="Switching remote URLs between SSH and HTTPS"></a>Switching remote URLs between SSH and HTTPS</h2><p>Check existing remote:</p>
+<ul>
+<li><p>If SSH:</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ git remote -v</span><br><span class="line">origin  git@github.com:USERNAME/REPOSITORY.git (fetch)</span><br><span class="line">origin  git@github.com:USERNAME/REPOSITORY.git (push)</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>If HTTPS:</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ git remote -v</span><br><span class="line">origin  https://github.com/USERNAME/REPOSITORY.git (fetch)</span><br><span class="line">origin  https://github.com/USERNAME/REPOSITORY.git (push)</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
 <a id="more"></a>
-<h3 id="change-git-remote-for-the-project"><a href="#change-git-remote-for-the-project" class="headerlink" title="change git remote for the project"></a>change git remote for the project</h3><ol>
-<li>Go to the repo in github. </li>
-<li><code>clone or download</code> -&gt; <code>Use SSH</code></li>
-<li>Copy the SSH key and passphrase</li>
-<li><code>git bash</code> on the local folder<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git remote set-url origin git@github.com:Ryanluoxu/hexoBlog.git</span><br></pre></td></tr></table></figure>
-</li>
-</ol>
-<h3 id="SSH-keys"><a href="#SSH-keys" class="headerlink" title="SSH keys"></a>SSH keys</h3><ol>
-<li><p>Check for existing SSH keys</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ ls -al ~/.ssh</span><br></pre></td></tr></table></figure>
-<p> Check the directory listing to see if you already have a public SSH key.</p>
-</li>
-<li><p>If not, generate an SSH keypair on your computer</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ ssh-keygen -t rsa -b 4096 -C &quot;your_email@example.com&quot;</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>copy content of <code>~/.ssh/id_rsa.pub</code></p>
-</li>
-<li><p>Go to github. <code>Settings</code> - <code>SSH and GPG keys</code> - <code>New SSH key</code></p>
-</li>
-<li><p>Paste and <code>Add SSH key</code></p>
-</li>
-</ol>
-<p>Done</p>
+<p>Change your remote’s URL from SSH to HTTPS<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git remote <span class="built_in">set</span>-url origin https://github.com/USERNAME/REPOSITORY.git</span><br></pre></td></tr></table></figure></p>
+<p>Change your remote’s URL from HTTPS to SSH<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git remote <span class="built_in">set</span>-url origin git@github.com:USERNAME/REPOSITORY.git</span><br></pre></td></tr></table></figure></p>
+<p>Reference: <a href="https://help.github.com/articles/changing-a-remote-s-url/" target="_blank" rel="noopener">https://help.github.com/articles/changing-a-remote-s-url/</a></p>
+<h2 id="git-push-without-entering-username-amp-password"><a href="#git-push-without-entering-username-amp-password" class="headerlink" title="git push without entering username &amp; password"></a>git push without entering username &amp; password</h2><h3 id="HTTPS"><a href="#HTTPS" class="headerlink" title="HTTPS"></a>HTTPS</h3><p>For the repo which is cloned from GitHub using HTTPS, use a credential helper to remember username and password.</p>
+<p>With Git for Windows, run the following commands to store credentials:<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git config --global credential.helper wincred</span><br></pre></td></tr></table></figure></p>
+<h3 id="SSH"><a href="#SSH" class="headerlink" title="SSH"></a>SSH</h3><p>For the repo which is cloned from GitHub using SSH, use SSH keys. -&gt; <a href="https://help.github.com/articles/generating-an-ssh-key" target="_blank" rel="noopener">Generating an SSH Key</a></p>
+<p>Reference:<a href="https://help.github.com/articles/caching-your-github-password-in-git/#platform-windows" target="_blank" rel="noopener">Caching your GitHub password in Git</a></p>
 
       
     </div>
@@ -679,7 +671,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#git-push-without-entering-username-amp-password"><span class="nav-number">1.</span> <span class="nav-text">git push without entering username & password</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#change-git-remote-for-the-project"><span class="nav-number">1.1.</span> <span class="nav-text">change git remote for the project</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#SSH-keys"><span class="nav-number">1.2.</span> <span class="nav-text">SSH keys</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Switching-remote-URLs-between-SSH-and-HTTPS"><span class="nav-number">1.</span> <span class="nav-text">Switching remote URLs between SSH and HTTPS</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#git-push-without-entering-username-amp-password"><span class="nav-number">2.</span> <span class="nav-text">git push without entering username & password</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#HTTPS"><span class="nav-number">2.1.</span> <span class="nav-text">HTTPS</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#SSH"><span class="nav-number">2.2.</span> <span class="nav-text">SSH</span></a></li></ol></li></ol></div>
             
 
           </div>
