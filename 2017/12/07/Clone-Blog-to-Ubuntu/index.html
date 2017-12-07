@@ -85,16 +85,12 @@
 <meta property="og:title" content="Clone Blog to Ubuntu">
 <meta property="og:url" content="https://ryanluoxu.github.io/2017/12/07/Clone-Blog-to-Ubuntu/index.html">
 <meta property="og:site_name" content="猎 日">
-<meta property="og:description" content="My current working space for this hexo blog is in windows 10. This is how I migrate to Ubuntu. upload project to github create new repo in github called : hexoBlog open git bash on blog folder, and ru">
+<meta property="og:description" content="My current working space for this hexo blog is in windows 10. This is how I migrate to Ubuntu. upload project to github create new repo in github called : hexoBlog If any folders inside are cloned fro">
 <meta property="og:locale" content="en">
-<<<<<<< HEAD
-<meta property="og:updated_time" content="2017-12-06T21:45:18.107Z">
-=======
-<meta property="og:updated_time" content="2017-12-07T05:01:37.423Z">
->>>>>>> 286d8a375e93369ce5bc666400a3003090ebf88a
+<meta property="og:updated_time" content="2017-12-07T03:48:02.317Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Clone Blog to Ubuntu">
-<meta name="twitter:description" content="My current working space for this hexo blog is in windows 10. This is how I migrate to Ubuntu. upload project to github create new repo in github called : hexoBlog open git bash on blog folder, and ru">
+<meta name="twitter:description" content="My current working space for this hexo blog is in windows 10. This is how I migrate to Ubuntu. upload project to github create new repo in github called : hexoBlog If any folders inside are cloned fro">
 
 
 
@@ -322,11 +318,7 @@
               
                 <span class="post-meta-item-text">Post modified&#58;</span>
               
-<<<<<<< HEAD
-              <time title="Post modified" itemprop="dateModified" datetime="2017-12-07T05:45:18+08:00">
-=======
-              <time title="Post modified" itemprop="dateModified" datetime="2017-12-07T13:01:37+08:00">
->>>>>>> 286d8a375e93369ce5bc666400a3003090ebf88a
+              <time title="Post modified" itemprop="dateModified" datetime="2017-12-07T11:48:02+08:00">
                 2017-12-07
               </time>
             
@@ -401,11 +393,15 @@
 <p>This is how I migrate to Ubuntu.</p>
 <h1 id="upload-project-to-github"><a href="#upload-project-to-github" class="headerlink" title="upload project to github"></a>upload project to github</h1><ol>
 <li>create new repo in github called : hexoBlog</li>
+<li>If any folders inside are cloned from github. Need to remove git related files:<ul>
+<li>.git</li>
+<li>.gitignore</li>
+<li>.github/</li>
+<li>…<a id="more"></a></li>
+</ul>
+</li>
 <li><p>open git bash on blog folder, and run:</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">$ git init</span><br><span class="line">$ git add --all</span><br><span class="line">$ git commit</span><br><span class="line">$ git remote add origin https://github.com/Ryanluoxu/hexoBlog.git</span><br><span class="line">$ git push</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>If any folders inside are cloned from github. Need to remove .git first:</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ rm -rf .git</span><br></pre></td></tr></table></figure>
 </li>
 <li><p><code>git push</code> may face “fatal: The current branch master has no upstream branch”. Run:</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git push -u origin master</span><br></pre></td></tr></table></figure>
@@ -415,16 +411,7 @@
 <h1 id="clone-project-to-Ubuntu"><a href="#clone-project-to-Ubuntu" class="headerlink" title="clone project to Ubuntu"></a>clone project to Ubuntu</h1><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">$ git push -u origin master	<span class="comment">#1 install git</span></span><br><span class="line">$ mkdir ~/git			<span class="comment">#2 create folder git under home</span></span><br><span class="line">$ <span class="built_in">cd</span> ~/git</span><br><span class="line">$ git <span class="built_in">clone</span> https://github.com/Ryanluoxu/hexoBlog.git	<span class="comment">#3 clone project from github</span></span><br></pre></td></tr></table></figure>
 <p>Now local working space is : ~/git/hexoblog/</p>
 <h1 id="installation"><a href="#installation" class="headerlink" title="installation"></a>installation</h1><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.2/install.sh | bash	<span class="comment">#1 install Node Version Manager</span></span><br><span class="line">$ nvm install stable	<span class="comment">#2 install Node.js</span></span><br><span class="line">$ npm install -g hexo-cli	<span class="comment">#3 install hexo</span></span><br></pre></td></tr></table></figure>
-<h1 id="Hexo-setup"><a href="#Hexo-setup" class="headerlink" title="Hexo setup"></a>Hexo setup</h1><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ hexo init ~/git/hexoBlog</span><br><span class="line">$</span><br></pre></td></tr></table></figure>
-<p>$ npm install hexo –save</p>
-<h2 id="Install"><a href="#Install" class="headerlink" title="Install"></a>Install</h2><ul>
-<li><p>install git</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ sudo apt install git</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>install nodejs</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ sudo apt-get update</span><br><span class="line">$ sudo apt-get install nodejs	</span><br><span class="line">$ sudo apt-get install npm	# package manager</span><br></pre></td></tr></table></figure>
-</li>
-</ul>
+<p>Done.</p>
 
       
     </div>
@@ -618,11 +605,7 @@
                 
 				  <a href="/categories/index.html">
 				
-<<<<<<< HEAD
-                  <span class="site-state-item-count">3</span>
-=======
                   <span class="site-state-item-count">4</span>
->>>>>>> 286d8a375e93369ce5bc666400a3003090ebf88a
                   <span class="site-state-item-name">categories</span>
                 </a>
               </div>
@@ -696,7 +679,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#upload-project-to-github"><span class="nav-number">1.</span> <span class="nav-text">upload project to github</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#clone-project-to-Ubuntu"><span class="nav-number">2.</span> <span class="nav-text">clone project to Ubuntu</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#installation"><span class="nav-number">3.</span> <span class="nav-text">installation</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Hexo-setup"><span class="nav-number">4.</span> <span class="nav-text">Hexo setup</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Install"><span class="nav-number">4.1.</span> <span class="nav-text">Install</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#upload-project-to-github"><span class="nav-number">1.</span> <span class="nav-text">upload project to github</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#clone-project-to-Ubuntu"><span class="nav-number">2.</span> <span class="nav-text">clone project to Ubuntu</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#installation"><span class="nav-number">3.</span> <span class="nav-text">installation</span></a></li></ol></div>
             
 
           </div>
