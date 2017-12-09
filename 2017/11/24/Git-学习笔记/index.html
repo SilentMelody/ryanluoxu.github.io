@@ -89,7 +89,7 @@
 <meta property="og:locale" content="en">
 <meta property="og:image" content="https://ryanluoxu.github.io/images/Git%20周期.png">
 <meta property="og:image" content="https://ryanluoxu.github.io/images/本地修改-github的流程图.jpg">
-<meta property="og:updated_time" content="2017-12-06T13:43:03.000Z">
+<meta property="og:updated_time" content="2017-12-09T12:23:54.756Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Git - 学习笔记">
 <meta name="twitter:description" content="声明：本文为 ryanluoxu 原创文章，欢迎转载，请在明显位置注明出处。 学习素材：Pro Git 常用指令1234git add		#添加到下一次的提交中。git status -s	#状态简览git diff --staged	##暂存区域 - 本地 Repogit commit -a -m &apos;comment&apos;	#跳过git add Git 周期">
@@ -321,8 +321,8 @@
               
                 <span class="post-meta-item-text">Post modified&#58;</span>
               
-              <time title="Post modified" itemprop="dateModified" datetime="2017-12-06T21:43:03+08:00">
-                2017-12-06
+              <time title="Post modified" itemprop="dateModified" datetime="2017-12-09T20:23:54+08:00">
+                2017-12-09
               </time>
             
           </span>
@@ -437,6 +437,30 @@
 <li><p>realised <code>next</code> is cloned from github. Itself contains a .git folder.</p>
 </li>
 <li>remove <code>next</code> local git repo.<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="built_in">cd</span> theme/next/</span><br><span class="line">$ rm -rf .git</span><br><span class="line">$ <span class="built_in">cd</span> ../..</span><br><span class="line">$ git status</span><br><span class="line"></span><br><span class="line">nothing to commit, working tree clean</span><br><span class="line"></span><br><span class="line">$ git push</span><br><span class="line"></span><br><span class="line">fatal: The current branch master has no upstream branch.</span><br><span class="line">To push the current branch and <span class="built_in">set</span> the remote as upstream, use</span><br><span class="line"></span><br><span class="line">    git push --<span class="built_in">set</span>-upstream origin master</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">$ git push -u origin master		<span class="comment">#org</span></span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<h3 id="existing-project-gt-remote-repo-amp-eclipse"><a href="#existing-project-gt-remote-repo-amp-eclipse" class="headerlink" title="existing project -&gt; remote repo &amp; eclipse"></a>existing project -&gt; remote repo &amp; eclipse</h3><ol>
+<li>create empty remote repo: <code>myProject</code></li>
+<li>git bash on <code>~/workspace</code></li>
+<li><p>clone repo</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git clone &lt;**/myProject.git&gt;	# create `~/workspace/myProject`</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>copy existing project files into <code>~/workspace/myProject</code></p>
+</li>
+<li><p>git push to remote repo</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cd</span> ~/workspace/myProject</span><br><span class="line">git add --all</span><br><span class="line">git commit -m <span class="string">"initial commit"</span></span><br><span class="line">git push</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>Add local repo to Eclipse</p>
+<ul>
+<li>open git repo window</li>
+<li>add local git repo and choose <code>~/workspace/myProject</code></li>
+</ul>
+</li>
+<li>Go to working directory and import existing project</li>
+<li>Once code change. <ul>
+<li>Right click project</li>
+<li>team - commit - give commit message - commit and push</li>
+</ul>
 </li>
 </ol>
 
@@ -706,7 +730,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#常用指令"><span class="nav-number">1.</span> <span class="nav-text">常用指令</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Git-基础"><span class="nav-number">2.</span> <span class="nav-text">Git 基础</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#获取-Git-仓库"><span class="nav-number">2.1.</span> <span class="nav-text">获取 Git 仓库</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#提交文件"><span class="nav-number">2.2.</span> <span class="nav-text">提交文件</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#文件的三种状态"><span class="nav-number">2.2.1.</span> <span class="nav-text">文件的三种状态</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#git-status"><span class="nav-number">2.2.2.</span> <span class="nav-text">git status</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#git-ignore"><span class="nav-number">2.2.3.</span> <span class="nav-text">git ignore</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#git-diff"><span class="nav-number">2.2.4.</span> <span class="nav-text">git diff</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#git-commit"><span class="nav-number">2.2.5.</span> <span class="nav-text">git commit</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#远程仓库"><span class="nav-number">2.3.</span> <span class="nav-text">远程仓库</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Push-existing-project-to-github"><span class="nav-number">2.3.1.</span> <span class="nav-text">Push existing project to github</span></a></li></ol></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#常用指令"><span class="nav-number">1.</span> <span class="nav-text">常用指令</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Git-基础"><span class="nav-number">2.</span> <span class="nav-text">Git 基础</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#获取-Git-仓库"><span class="nav-number">2.1.</span> <span class="nav-text">获取 Git 仓库</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#提交文件"><span class="nav-number">2.2.</span> <span class="nav-text">提交文件</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#文件的三种状态"><span class="nav-number">2.2.1.</span> <span class="nav-text">文件的三种状态</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#git-status"><span class="nav-number">2.2.2.</span> <span class="nav-text">git status</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#git-ignore"><span class="nav-number">2.2.3.</span> <span class="nav-text">git ignore</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#git-diff"><span class="nav-number">2.2.4.</span> <span class="nav-text">git diff</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#git-commit"><span class="nav-number">2.2.5.</span> <span class="nav-text">git commit</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#远程仓库"><span class="nav-number">2.3.</span> <span class="nav-text">远程仓库</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Push-existing-project-to-github"><span class="nav-number">2.3.1.</span> <span class="nav-text">Push existing project to github</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#existing-project-gt-remote-repo-amp-eclipse"><span class="nav-number">2.3.2.</span> <span class="nav-text">existing project -> remote repo & eclipse</span></a></li></ol></li></ol></li></ol></div>
             
 
           </div>
