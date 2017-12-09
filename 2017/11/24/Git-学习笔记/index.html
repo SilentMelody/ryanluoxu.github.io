@@ -89,7 +89,7 @@
 <meta property="og:locale" content="en">
 <meta property="og:image" content="https://ryanluoxu.github.io/images/Git%20周期.png">
 <meta property="og:image" content="https://ryanluoxu.github.io/images/本地修改-github的流程图.jpg">
-<meta property="og:updated_time" content="2017-12-09T12:26:50.742Z">
+<meta property="og:updated_time" content="2017-12-09T12:39:52.981Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Git - 学习笔记">
 <meta name="twitter:description" content="声明：本文为 ryanluoxu 原创文章，欢迎转载，请在明显位置注明出处。 学习素材：Pro Git 常用指令1234git add		#添加到下一次的提交中。git status -s	#状态简览git diff --staged	##暂存区域 - 本地 Repogit commit -a -m &apos;comment&apos;	#跳过git add Git 周期">
@@ -321,7 +321,7 @@
               
                 <span class="post-meta-item-text">Post modified&#58;</span>
               
-              <time title="Post modified" itemprop="dateModified" datetime="2017-12-09T20:26:50+08:00">
+              <time title="Post modified" itemprop="dateModified" datetime="2017-12-09T20:39:52+08:00">
                 2017-12-09
               </time>
             
@@ -443,15 +443,17 @@
 <li>create empty remote repo: <code>myProject</code></li>
 <li>git bash on <code>~/workspace</code></li>
 <li><p>clone repo</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git clone &lt;**/myProject.git&gt;	# create `~/workspace/myProject`</span><br></pre></td></tr></table></figure>
+ <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git clone &lt;**/myProject.git&gt;	# create `~/workspace/myProject`</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>copy existing project files into <code>~/workspace/myProject</code></p>
 </li>
-<li><p>git push to remote repo</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cd</span> ~/workspace/myProject</span><br><span class="line">git add --all</span><br><span class="line">git commit -m <span class="string">"initial commit"</span></span><br><span class="line">git push</span><br></pre></td></tr></table></figure>
+<li>git push to remote repo<pre><code class="bash"><span class="built_in">cd</span> ~/workspace/myProject
+git add --all
+git commit -m <span class="string">"initial commit"</span>
+git push
+</code></pre>
 </li>
-<li><p>Add local repo to Eclipse </p>
-<ul>
+<li>Add local repo to Eclipse. <ul>
 <li>open git repo window</li>
 <li>add local git repo and choose <code>~/workspace/myProject</code></li>
 </ul>
