@@ -319,7 +319,7 @@
               
                 <span class="post-meta-item-text">Post modified&#58;</span>
               
-              <time title="Post modified" itemprop="dateModified" datetime="2017-12-10T22:50:13+08:00">
+              <time title="Post modified" itemprop="dateModified" datetime="2017-12-10T23:42:48+08:00">
                 2017-12-10
               </time>
             
@@ -376,53 +376,19 @@
 
       
         
-          
-            <p>Learning Material: <a href="https://www.youtube.com/watch?v=zKkUN-mJtPQ&amp;list=PL6n9fhu94yhWKHkcL7RJmmXyxkuFB3KSl" target="_blank" rel="noopener">AngularJS tutorial for beginners</a></p>
+          <p>Learning Material: <a href="https://www.youtube.com/watch?v=zKkUN-mJtPQ&amp;list=PL6n9fhu94yhWKHkcL7RJmmXyxkuFB3KSl" target="_blank" rel="noopener">AngularJS tutorial for beginners</a></p>
 <h2 id="1-What-is-AngularJS"><a href="#1-What-is-AngularJS" class="headerlink" title="1. What is AngularJS"></a>1. What is AngularJS</h2><ul>
 <li>JavaScript framework</li>
 <li>Help to build web application</li>
 <li>MVC</li>
 </ul>
-<p>Two requirements to start using AngularJS</p>
-<ol>
-<li><p>Copy <code>angular.min.js</code> in and insert to html</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&lt;head&gt;</span><br><span class="line">	&lt;script src=&quot;scripts/angular.min.js&quot;&gt;&lt;/script&gt;	&lt;!-- 1st requirement --&gt;</span><br><span class="line">&lt;/head&gt;</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>insert <code>ng-app</code> to activate angular</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&lt;body ng-app&gt;	&lt;!-- 2nd requirement: activate angular --&gt;</span><br><span class="line">	&lt;div&gt;</span><br><span class="line">		10+20=&#123;&#123;10+20&#125;&#125;</span><br><span class="line">	&lt;/div&gt;</span><br><span class="line">&lt;/body&gt;</span><br></pre></td></tr></table></figure>
-</li>
-</ol>
-<p><strong>Demo:</strong><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">10+20=&#123;&#123;10+20&#125;&#125;</span><br><span class="line">&#123;&#123;1==2&#125;&#125;</span><br><span class="line">&#123;&#123; &#123;name: &apos;Ryan&apos;, age: &apos;30&apos;&#125;.name &#125;&#125;</span><br><span class="line">&#123;&#123; [&apos;David&apos;,&apos;Lucy&apos;,&apos;Shell&apos;][2] &#125;&#125;	#Shell</span><br></pre></td></tr></table></figure></p>
-<h2 id="2-Modules-and-Controllers"><a href="#2-Modules-and-Controllers" class="headerlink" title="2. Modules and Controllers"></a>2. Modules and Controllers</h2><ol>
-<li>Module<ul>
-<li>a container: controller, service, directive, filter..</li>
-<li>as a main() method</li>
-</ul>
-</li>
-<li><p>Create a module</p>
- <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">var myApp = angular.module(&quot;myModule&quot;,[]);	# ModuleName &amp; its dependency</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>Controller</p>
-<ul>
-<li>a JS function</li>
-<li>to build a model for the view to display</li>
-<li>model is data</li>
-</ul>
-</li>
-<li>Create a controller <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">var myController = function ($scope) &#123;</span><br><span class="line">	$scope.message = &quot;Hello world..&quot;;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-</li>
-</ol>
-<p><strong>Demo:</strong></p>
-<ul>
-<li><p>script.js</p>
-  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">var myApp = angular.module(&quot;myModule&quot;,[]);	// 1. create module</span><br><span class="line"></span><br><span class="line">myApp.controller(&quot;myController&quot;, function ($scope) &#123;	// 2. create controller</span><br><span class="line">	$scope.message = &quot;Hello world..&quot;;</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>index.html</p>
-  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">&lt;head&gt;</span><br><span class="line">	&lt;script src=&quot;scripts/script.js&quot;&gt;&lt;/script&gt;</span><br><span class="line">&lt;/head&gt;</span><br><span class="line"></span><br><span class="line">&lt;body ng-app=&quot;myModule&quot;&gt;</span><br><span class="line">	&lt;div ng-controller=&quot;myController&quot;&gt;</span><br><span class="line">		&#123;&#123; message &#125;&#125;</span><br><span class="line">	&lt;/div&gt;</span><br><span class="line">&lt;/body&gt;</span><br></pre></td></tr></table></figure>
-</li>
-</ul>
-
-          
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2017/12/10/AngularJS-Learning/#more" rel="contents">
+              Read more &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
