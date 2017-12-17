@@ -272,6 +272,217 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://ryanluoxu.github.io/2017/12/16/Database-PostgreSQL/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Ryan Luo Xu 罗旭">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar1.JPG">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="猎 日">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2017/12/16/Database-PostgreSQL/" itemprop="url">Database - PostgreSQL on AWS</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-12-16T11:00:28+08:00">
+                2017-12-16
+              </time>
+            
+
+            
+              <span class="post-meta-divider">|</span>
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-check-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Post modified&#58;</span>
+              
+              <time title="Post modified" itemprop="dateModified" datetime="2017-12-17T20:57:14+08:00">
+                2017-12-17
+              </time>
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Database/" itemprop="url" rel="index">
+                    <span itemprop="name">Database</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>Create Postgres database on Amazon Web Service.<br>Install pgAdmin as client application to connect to database.</p>
+<h1 id="Create-Postgres-Database-on-AWS"><a href="#Create-Postgres-Database-on-AWS" class="headerlink" title="Create Postgres Database on AWS"></a>Create Postgres Database on AWS</h1><p>Create an AWS account before creating database.</p>
+<p>Reference: <a href="https://aws.amazon.com/getting-started/tutorials/create-connect-postgresql-db/" target="_blank" rel="noopener">Create and Connect to a PostgreSQL Database</a></p>
+<ul>
+<li>go to this page: <a href="https://ap-southeast-1.console.aws.amazon.com/console/home?region=ap-southeast-1" target="_blank" rel="noopener">AWS services</a></li>
+<li>search for <code>RDS</code> and click</li>
+<li>search for <code>Create instance</code> and click <code>Launch a DB instance</code></li>
+</ul>
+<p>Below steps made under <code>Free Usage Tier</code></p>
+<ol>
+<li>Engine: <code>PostgreSQL</code></li>
+<li>Use case: <code>Dev/Test</code></li>
+<li>DB details: <ul>
+<li>tick <code>Only enable options eligible for RDS Free Usage Tier</code></li>
+<li>DB instance identifier: <code>myPostgresDB</code></li>
+<li>Master username: <code>admin123</code></li>
+<li>Master password: <code>admin123</code></li>
+</ul>
+</li>
+<li>Configure advanced settings<ul>
+<li>tick <code>Yes</code> for Public accessibility</li>
+<li>Database name: <code>Demo</code></li>
+</ul>
+</li>
+</ol>
+<p>Click <code>Launch DB instance</code> to create.</p>
+<h1 id="Use-pgAdmin-as-Client-Application"><a href="#Use-pgAdmin-as-Client-Application" class="headerlink" title="Use pgAdmin as Client Application"></a>Use pgAdmin as Client Application</h1><p>Reference: <a href="http://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_ConnectToPostgreSQLInstance.html" target="_blank" rel="noopener">Connecting to a DB Instance Running the PostgreSQL Database Engine</a></p>
+<p>To connect to database, go to <code>RDS</code>&gt;<code>Instances</code>&gt;<code>postgresql</code> and collect below info:</p>
+<ul>
+<li>Endpoint</li>
+<li>Port</li>
+<li>Username</li>
+<li>Password</li>
+</ul>
+<ol>
+<li>Go to <a href="https://www.pgadmin.org/download/" target="_blank" rel="noopener">Download - pgAdmin</a> to download <code>pgAdmin 4 v2.0</code></li>
+<li>Install and Open pgAdmin</li>
+<li>Right click <code>Servers</code> - <code>Create</code> - <code>Server...</code></li>
+<li>General:<ul>
+<li>Name: <code>Demo</code></li>
+<li>Comments: <code>Demo</code></li>
+</ul>
+</li>
+<li>Connection: <ul>
+<li>Host: <code>&lt;Endpoint&gt;</code></li>
+<li>Port:    <code>&lt;Port&gt;</code></li>
+<li>Username: <code>&lt;Username&gt;</code></li>
+<li>Password: <code>&lt;Password&gt;</code></li>
+<li>Role: Empty</li>
+</ul>
+</li>
+</ol>
+<p>Click <code>Save</code></p>
+<h1 id="Use-Squirrel-SQL-Client-as-Client-Application"><a href="#Use-Squirrel-SQL-Client-as-Client-Application" class="headerlink" title="Use Squirrel SQL Client as Client Application"></a>Use Squirrel SQL Client as Client Application</h1><p>Squirrel SQL Client Application<br>postgresql-42.1.4 driver</p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+	
+	<div>
+      
+	</div>
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="https://ryanluoxu.github.io/2017/12/10/AngularJS-Learning/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1795,171 +2006,6 @@
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://ryanluoxu.github.io/2017/11/24/Git-学习笔记/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Ryan Luo Xu 罗旭">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar1.JPG">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="猎 日">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2017/11/24/Git-学习笔记/" itemprop="url">Git - 学习笔记</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-11-24T22:46:23+08:00">
-                2017-11-24
-              </time>
-            
-
-            
-              <span class="post-meta-divider">|</span>
-            
-
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-check-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Post modified&#58;</span>
-              
-              <time title="Post modified" itemprop="dateModified" datetime="2017-12-09T20:39:52+08:00">
-                2017-12-09
-              </time>
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Git/" itemprop="url" rel="index">
-                    <span itemprop="name">Git</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <p><strong>声明：本文为 ryanluoxu 原创文章，欢迎转载，请在明显位置注明出处。</strong></p>
-<p>学习素材：<a href="https://bingohuang.gitbooks.io/progit2/content/02-git-basics/sections/getting-a-repository.html" target="_blank" rel="noopener">Pro Git</a></p>
-<h1 id="常用指令"><a href="#常用指令" class="headerlink" title="常用指令"></a>常用指令</h1><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">git add		<span class="comment">#添加到下一次的提交中。</span></span><br><span class="line">git status -s	<span class="comment">#状态简览</span></span><br><span class="line">git diff --staged	<span class="comment">##暂存区域 - 本地 Repo</span></span><br><span class="line">git commit -a -m <span class="string">'comment'</span>	<span class="comment">#跳过git add</span></span><br></pre></td></tr></table></figure>
-<p>Git 周期<br><img src="/images/Git 周期.png" alt="Git 周期"></p>
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2017/11/24/Git-学习笔记/#more" rel="contents">
-              Read more &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-    
-    
-    
-	
-	<div>
-      
-	</div>
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
   </section>
 
   
@@ -2014,7 +2060,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">12</span>
+                  <span class="site-state-item-count">13</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>
@@ -2027,7 +2073,7 @@
                 
 				  <a href="/categories/index.html">
 				
-                  <span class="site-state-item-count">5</span>
+                  <span class="site-state-item-count">6</span>
                   <span class="site-state-item-name">categories</span>
                 </a>
               </div>
@@ -2040,7 +2086,7 @@
                 
 				  <a href="/tags/index.html">
 				
-                  <span class="site-state-item-count">31</span>
+                  <span class="site-state-item-count">36</span>
                   <span class="site-state-item-name">tags</span>
                 </a>
               </div>
