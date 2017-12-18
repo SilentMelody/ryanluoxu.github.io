@@ -272,7 +272,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://ryanluoxu.github.io/2017/12/17/RESTful-Web-Service-with-AngularJS/">
+    <link itemprop="mainEntityOfPage" href="https://ryanluoxu.github.io/2017/12/17/RESTful-Web-Service-with-AngularJS-1/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Ryan Luo Xu 罗旭">
@@ -291,7 +291,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2017/12/17/RESTful-Web-Service-with-AngularJS/" itemprop="url">RESTful Web Service with AngularJS</a></h1>
+                <a class="post-title-link" href="/2017/12/17/RESTful-Web-Service-with-AngularJS-1/" itemprop="url">RESTful Web Service with AngularJS</a></h1>
         
 
         <div class="post-meta">
@@ -319,8 +319,8 @@
               
                 <span class="post-meta-item-text">Post modified&#58;</span>
               
-              <time title="Post modified" itemprop="dateModified" datetime="2017-12-17T23:12:57+08:00">
-                2017-12-17
+              <time title="Post modified" itemprop="dateModified" datetime="2017-12-19T00:43:03+08:00">
+                2017-12-19
               </time>
             
           </span>
@@ -384,18 +384,15 @@
 <p><a href="http://blog.javachen.com/2015/01/06/build-app-with-spring-boot-and-gradle.html" target="_blank" rel="noopener">使用Spring Boot和Gradle创建AngularJS项目</a></p>
 <h1 id="Spring-Boot-amp-AngularJS"><a href="#Spring-Boot-amp-AngularJS" class="headerlink" title="Spring Boot &amp; AngularJS"></a>Spring Boot &amp; AngularJS</h1><p>Reference: <a href="http://blog.javachen.com/2015/01/06/build-app-with-spring-boot-and-gradle.html" target="_blank" rel="noopener">使用Spring Boot和Gradle创建AngularJS项目</a></p>
 <ol>
-<li>Install Maven</li>
-</ol>
-<ul>
-<li><a href="https://maven.apache.org/download.cgi" target="_blank" rel="noopener">https://maven.apache.org/download.cgi</a></li>
-<li>apache-maven-3.5.2-bin.zip</li>
-<li><a href="https://maven.apache.org/install.html" target="_blank" rel="noopener">https://maven.apache.org/install.html</a></li>
-<li></li>
+<li>Generate Project<ul>
+<li><a href="http://start.spring.io/" target="_blank" rel="noopener">http://start.spring.io/</a></li>
+<li>GroupId: com.demo</li>
+<li>Artifact: ng-spring-boot</li>
 </ul>
-<ol>
-<li><a href="http://start.spring.io/" target="_blank" rel="noopener">http://start.spring.io/</a> to Generate Project</li>
+</li>
 </ol>
-<p>com.demo<br>ng-spring-boot</p>
+<p>Structure:<br><img src="/images/ngspringboot-structure.png" alt="Project Structure"></p>
+<p>修改 main 方法，获取 ApplicationContext 信息。</p>
 <p>====<br>Temp:</p>
 <p>Take from ZhiHu, will delete soon.</p>
 <p>URL定位资源，用HTTP动词（GET,POST,DELETE,DETC）描述操作。</p>
