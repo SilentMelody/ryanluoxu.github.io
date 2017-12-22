@@ -319,7 +319,7 @@
               
                 <span class="post-meta-item-text">Post modified&#58;</span>
               
-              <time title="Post modified" itemprop="dateModified" datetime="2017-12-22T17:08:55+08:00">
+              <time title="Post modified" itemprop="dateModified" datetime="2017-12-22T17:13:37+08:00">
                 2017-12-22
               </time>
             
@@ -376,114 +376,20 @@
 
       
         
-          
-            <ul>
+          <p><img src="/images/SQuirreL-SQL-Client.png" alt="SQuirreL SQL Client"></p>
+<ul>
 <li>Create Postgres database on Amazon Web Service. </li>
 <li>Install pgAdmin as client application to connect to database.</li>
 <li>Install SQuirreL SQL Client to connect to database.</li>
 </ul>
 <p>I personally prefer to use SQuirreL SQL Client than pgAdmin.</p>
-<h1 id="Create-Postgres-Database-on-AWS"><a href="#Create-Postgres-Database-on-AWS" class="headerlink" title="Create Postgres Database on AWS"></a>Create Postgres Database on AWS</h1><p>Reference: <a href="https://aws.amazon.com/getting-started/tutorials/create-connect-postgresql-db/" target="_blank" rel="noopener">Create and Connect to a PostgreSQL Database</a></p>
-<ol>
-<li>create an AWS account before creating database.</li>
-<li>go to this page: <a href="https://ap-southeast-1.console.aws.amazon.com/console/home?region=ap-southeast-1" target="_blank" rel="noopener">AWS services</a></li>
-<li>search for <code>RDS</code> and click</li>
-<li>search for <code>Create instance</code> and click <code>Launch a DB instance</code></li>
-</ol>
-<p>Below steps made under <code>Free Usage Tier</code></p>
-<ol>
-<li>Engine: <code>PostgreSQL</code></li>
-<li>Use case: <code>Dev/Test</code></li>
-<li>DB details: <ul>
-<li>tick <code>Only enable options eligible for RDS Free Usage Tier</code></li>
-<li>DB instance identifier: <code>myPostgresDB</code></li>
-<li>Master username: <code>xxxxxx</code></li>
-<li>Master password: <code>xxxxxx</code></li>
-</ul>
-</li>
-<li>Configure advanced settings<ul>
-<li>tick <code>Yes</code> for Public accessibility</li>
-<li>Database name: <code>Demo</code></li>
-</ul>
-</li>
-</ol>
-<p>Click <code>Launch DB instance</code> to create.</p>
-<h1 id="Use-pgAdmin-as-Client-Application"><a href="#Use-pgAdmin-as-Client-Application" class="headerlink" title="Use pgAdmin as Client Application"></a>Use pgAdmin as Client Application</h1><p>Reference: <a href="http://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_ConnectToPostgreSQLInstance.html" target="_blank" rel="noopener">Connecting to a DB Instance Running the PostgreSQL Database Engine</a></p>
-<p>To connect to database, go to <code>RDS</code>&gt;<code>Instances</code>&gt;<code>postgresql</code> and collect below info:</p>
-<ul>
-<li>Endpoint</li>
-<li>Port</li>
-<li>Username</li>
-<li>Password</li>
-</ul>
-<ol>
-<li>Go to <a href="https://www.pgadmin.org/download/" target="_blank" rel="noopener">Download - pgAdmin</a> to download <code>pgAdmin 4 v2.0</code></li>
-<li>Install and Open pgAdmin</li>
-<li>Right click <code>Servers</code> - <code>Create</code> - <code>Server...</code></li>
-<li>General:<ul>
-<li>Name: <code>Demo</code></li>
-<li>Comments: <code>Demo</code></li>
-</ul>
-</li>
-<li>Connection: <ul>
-<li>Host: <code>&lt;Endpoint&gt;</code></li>
-<li>Port:    <code>&lt;Port&gt;</code></li>
-<li>Username: <code>&lt;Username&gt;</code></li>
-<li>Password: <code>&lt;Password&gt;</code></li>
-<li>Role: Empty</li>
-</ul>
-</li>
-</ol>
-<p>Click <code>Save</code></p>
-<p>Done..</p>
-<h1 id="Use-Squirrel-SQL-Client-as-Client-Application"><a href="#Use-Squirrel-SQL-Client-as-Client-Application" class="headerlink" title="Use Squirrel SQL Client as Client Application"></a>Use Squirrel SQL Client as Client Application</h1><ol>
-<li>Install Squirrel SQL Client Application<ul>
-<li>Go to <a href="http://squirrel-sql.sourceforge.net/#installation" target="_blank" rel="noopener">SQuirreL SQL Client Download</a></li>
-<li>Download and install</li>
-</ul>
-</li>
-<li>Download PostgreSQL JDBC Driver<ul>
-<li>Go to <a href="https://jdbc.postgresql.org/download.html" target="_blank" rel="noopener">PostgreSQL JDBC Download</a></li>
-<li>Choose <code>PostgreSQL JDBC 4.2 Driver, 42.1.4</code></li>
-<li>Get <code>postgresql-42.1.4 driver</code></li>
-</ul>
-</li>
-<li>Add PostgreSQL driver for Squirrel SQL Client<ul>
-<li>Open <code>Squirrel SQL Client</code></li>
-<li>Choose <code>Driver</code> on the left</li>
-<li>Choose <code>+</code> to add driver</li>
-<li>Choose <code>Extra Class Path</code> and <code>Add</code></li>
-<li>Choose <code>postgresql-42.1.4 driver</code> just downloaded.</li>
-<li>Fill up:<ul>
-<li>PostgreSQL</li>
-<li>jdbc:postgresql://<host>:<5432>/<database></database></5432></host></li>
-<li><a href="http://jdbc.postgresql.org" target="_blank" rel="noopener">http://jdbc.postgresql.org</a></li>
-<li>org.postgresql.Driver</li>
-</ul>
-</li>
-<li>OK</li>
-</ul>
-</li>
-<li>Add Alias<ul>
-<li>Choose <code>Aliases</code> on the left</li>
-<li>Choose <code>+</code> to add</li>
-<li>Choose blue tick <code>PostgreSQL</code> as Driver</li>
-<li>Fill up:<ul>
-<li>Demo</li>
-<li>jdbc:postgresql://postgresql.cfqvncjculpj.ap-southeast-1.rds.amazonaws.com:5432/Demo</li>
-<li>userName</li>
-<li>password</li>
-</ul>
-</li>
-<li><code>Test</code></li>
-<li><code>Connect</code></li>
-<li><code>OK</code></li>
-</ul>
-</li>
-</ol>
-<p>Done..</p>
-
-          
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2017/12/16/Database-PostgreSQL/#more" rel="contents">
+              Read more &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
