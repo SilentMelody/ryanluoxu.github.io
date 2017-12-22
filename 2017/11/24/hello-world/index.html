@@ -86,10 +86,12 @@
 <meta property="og:site_name" content="猎 日">
 <meta property="og:description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2017-12-07T03:48:02.000Z">
+<meta property="og:image" content="https://ryanluoxu.github.io/images/ngspringboot-structure.png">
+<meta property="og:updated_time" content="2017-12-22T09:04:15.606Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Hello World">
 <meta name="twitter:description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick">
+<meta name="twitter:image" content="https://ryanluoxu.github.io/images/ngspringboot-structure.png">
 
 
 
@@ -317,8 +319,8 @@
               
                 <span class="post-meta-item-text">Post modified&#58;</span>
               
-              <time title="Post modified" itemprop="dateModified" datetime="2017-12-07T11:48:02+08:00">
-                2017-12-07
+              <time title="Post modified" itemprop="dateModified" datetime="2017-12-22T17:04:15+08:00">
+                2017-12-22
               </time>
             
           </span>
@@ -423,7 +425,46 @@ tags: [博客，文章] #文章标签，只有一项时 tags: blog
 </code></pre><h3 id="Code"><a href="#Code" class="headerlink" title="Code"></a>Code</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new &quot;My New Post&quot;</span><br></pre></td></tr></table></figure>
 <pre><code>$ hexo new &quot;My New Post&quot;
-</code></pre>
+</code></pre><h3 id="ZA-WU"><a href="#ZA-WU" class="headerlink" title="ZA WU"></a>ZA WU</h3><hr>
+<p>title: “RESTful Web Service with AngularJS”<br>date: 2017-12-17 22:10:18<br>categories: Rest</p>
+<h2 id="tags-Rest-Web-Service-AngularJS-Spring"><a href="#tags-Rest-Web-Service-AngularJS-Spring" class="headerlink" title="tags: [Rest, Web Service, AngularJS, Spring]"></a>tags: [Rest, Web Service, AngularJS, Spring]</h2><p><a href="https://spring.io/guides/gs/rest-service/" target="_blank" rel="noopener">Building a RESTful Web Service</a></p>
+<p><a href="https://spring.io/guides/tutorials/bookmarks/" target="_blank" rel="noopener">Building REST services with Spring</a></p>
+<p><a href="https://spring.io/understanding/REST" target="_blank" rel="noopener">Understanding REST</a></p>
+<p><a href="https://spring.io/guides/gs/consuming-rest-angularjs/" target="_blank" rel="noopener">Consuming a RESTful Web Service with AngularJS</a></p>
+<p><a href="http://blog.javachen.com/2015/01/06/build-app-with-spring-boot-and-gradle.html" target="_blank" rel="noopener">使用Spring Boot和Gradle创建AngularJS项目</a></p>
+<h1 id="Spring-Boot-amp-AngularJS"><a href="#Spring-Boot-amp-AngularJS" class="headerlink" title="Spring Boot &amp; AngularJS"></a>Spring Boot &amp; AngularJS</h1><p>Reference: <a href="http://blog.javachen.com/2015/01/06/build-app-with-spring-boot-and-gradle.html" target="_blank" rel="noopener">使用Spring Boot和Gradle创建AngularJS项目</a></p>
+<ol>
+<li>Generate Project<ul>
+<li><a href="http://start.spring.io/" target="_blank" rel="noopener">http://start.spring.io/</a></li>
+<li>GroupId: com.demo</li>
+<li>Artifact: ng-spring-boot</li>
+</ul>
+</li>
+</ol>
+<p>Structure:<br><img src="/images/ngspringboot-structure.png" alt="Project Structure"></p>
+<p>修改 main 方法，获取 ApplicationContext 信息。</p>
+<p>====<br>Temp:</p>
+<p>Take from ZhiHu, will delete soon.</p>
+<p>URL定位资源，用HTTP动词（GET,POST,DELETE,DETC）描述操作。</p>
+<ol>
+<li><p>REST描述的是在网络中client和server的一种交互形式</p>
+</li>
+<li><p>Server 提供的 RESTful API中，URL中只使用名词来指定资源，原则上不使用动词。<br>“资源”是REST架构或者说整个网络处理的核心。<br>比如：<br><a href="http://api.qc.com/v1/newsfeed" target="_blank" rel="noopener">http://api.qc.com/v1/newsfeed</a>: 获取某人的新鲜;<br><a href="http://api.qc.com/v1/friends" target="_blank" rel="noopener">http://api.qc.com/v1/friends</a>: 获取某人的好友列表;<br><a href="http://api.qc.com/v1/profile" target="_blank" rel="noopener">http://api.qc.com/v1/profile</a>: 获取某人的详细信息;</p>
+</li>
+</ol>
+<ol>
+<li>用HTTP协议里的动词来实现资源的添加，修改，删除等操作。</li>
+</ol>
+<p>即通过HTTP动词来实现资源的状态扭转：<br>GET 用来获取资源<br>POST 用来新建资源（也可以用于更新资源）<br>PUT 用来更新资源，DELETE 用来删除资源</p>
+<p>比如：<br>GET /products : will return the list of all products<br>POST /products : will add a product to the collection<br>GET /products/4 : will retrieve product #4<br>PUT /products/4 : will update product #4</p>
+<ol>
+<li><p>Server和Client之间传递某资源的一个表现形式，<br>比如用JSON，XML传输文本，或者用JPG，WebP传输图片等。当然还可以压缩HTTP传输时的数据（on-wire data compression）。</p>
+</li>
+<li><p>用 HTTP Status Code传递Server的状态信息。<br>比如最常用的 200 表示成功，500 表示Server内部错误等。</p>
+</li>
+</ol>
+<p>Web端和Server只使用上述定义的API来传递数据和改变数据状态。<br>格式一般是JSON。</p>
+
       
     </div>
     
@@ -591,7 +632,7 @@ tags: [博客，文章] #文章标签，只有一项时 tags: blog
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">14</span>
+                  <span class="site-state-item-count">13</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>
@@ -604,7 +645,7 @@ tags: [博客，文章] #文章标签，只有一项时 tags: blog
                 
 				  <a href="/categories/index.html">
 				
-                  <span class="site-state-item-count">7</span>
+                  <span class="site-state-item-count">6</span>
                   <span class="site-state-item-name">categories</span>
                 </a>
               </div>
@@ -617,7 +658,7 @@ tags: [博客，文章] #文章标签，只有一项时 tags: blog
                 
 				  <a href="/tags/index.html">
 				
-                  <span class="site-state-item-count">39</span>
+                  <span class="site-state-item-count">36</span>
                   <span class="site-state-item-name">tags</span>
                 </a>
               </div>
@@ -678,7 +719,7 @@ tags: [博客，文章] #文章标签，只有一项时 tags: blog
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Quick-Start"><span class="nav-number">1.</span> <span class="nav-text">Quick Start</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Create-a-new-post"><span class="nav-number">1.1.</span> <span class="nav-text">Create a new post</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Run-server"><span class="nav-number">1.2.</span> <span class="nav-text">Run server</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Generate-static-files"><span class="nav-number">1.3.</span> <span class="nav-text">Generate static files</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Deploy-to-remote-sites"><span class="nav-number">1.4.</span> <span class="nav-text">Deploy to remote sites</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Anything"><span class="nav-number">2.</span> <span class="nav-text">Anything</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Log"><span class="nav-number">2.1.</span> <span class="nav-text">Log</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#toDo"><span class="nav-number">2.2.</span> <span class="nav-text">toDo</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Doing"><span class="nav-number">2.3.</span> <span class="nav-text">Doing</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Done"><span class="nav-number">2.4.</span> <span class="nav-text">Done</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Tips-for-blog"><span class="nav-number">3.</span> <span class="nav-text">Tips for blog</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Read-more-gt-gt"><span class="nav-number">3.1.</span> <span class="nav-text">Read more >></span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Code"><span class="nav-number">3.2.</span> <span class="nav-text">Code</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Quick-Start"><span class="nav-number">1.</span> <span class="nav-text">Quick Start</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Create-a-new-post"><span class="nav-number">1.1.</span> <span class="nav-text">Create a new post</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Run-server"><span class="nav-number">1.2.</span> <span class="nav-text">Run server</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Generate-static-files"><span class="nav-number">1.3.</span> <span class="nav-text">Generate static files</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Deploy-to-remote-sites"><span class="nav-number">1.4.</span> <span class="nav-text">Deploy to remote sites</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Anything"><span class="nav-number">2.</span> <span class="nav-text">Anything</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Log"><span class="nav-number">2.1.</span> <span class="nav-text">Log</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#toDo"><span class="nav-number">2.2.</span> <span class="nav-text">toDo</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Doing"><span class="nav-number">2.3.</span> <span class="nav-text">Doing</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Done"><span class="nav-number">2.4.</span> <span class="nav-text">Done</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Tips-for-blog"><span class="nav-number">3.</span> <span class="nav-text">Tips for blog</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Read-more-gt-gt"><span class="nav-number">3.1.</span> <span class="nav-text">Read more >></span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Code"><span class="nav-number">3.2.</span> <span class="nav-text">Code</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#ZA-WU"><span class="nav-number">3.3.</span> <span class="nav-text">ZA WU</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#tags-Rest-Web-Service-AngularJS-Spring"><span class="nav-number">4.</span> <span class="nav-text">tags: [Rest, Web Service, AngularJS, Spring]</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Spring-Boot-amp-AngularJS"><span class="nav-number"></span> <span class="nav-text">Spring Boot & AngularJS</span></a></div>
             
 
           </div>

@@ -272,200 +272,6 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://ryanluoxu.github.io/2017/12/17/RESTful-Web-Service-with-AngularJS-1/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Ryan Luo Xu 罗旭">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar1.JPG">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="猎 日">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2017/12/17/RESTful-Web-Service-with-AngularJS-1/" itemprop="url">RESTful Web Service with AngularJS</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-12-17T22:10:18+08:00">
-                2017-12-17
-              </time>
-            
-
-            
-              <span class="post-meta-divider">|</span>
-            
-
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-check-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Post modified&#58;</span>
-              
-              <time title="Post modified" itemprop="dateModified" datetime="2017-12-19T00:43:03+08:00">
-                2017-12-19
-              </time>
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Rest/" itemprop="url" rel="index">
-                    <span itemprop="name">Rest</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p><a href="https://spring.io/guides/gs/rest-service/" target="_blank" rel="noopener">Building a RESTful Web Service</a></p>
-<p><a href="https://spring.io/guides/tutorials/bookmarks/" target="_blank" rel="noopener">Building REST services with Spring</a></p>
-<p><a href="https://spring.io/understanding/REST" target="_blank" rel="noopener">Understanding REST</a></p>
-<p><a href="https://spring.io/guides/gs/consuming-rest-angularjs/" target="_blank" rel="noopener">Consuming a RESTful Web Service with AngularJS</a></p>
-<p><a href="http://blog.javachen.com/2015/01/06/build-app-with-spring-boot-and-gradle.html" target="_blank" rel="noopener">使用Spring Boot和Gradle创建AngularJS项目</a></p>
-<h1 id="Spring-Boot-amp-AngularJS"><a href="#Spring-Boot-amp-AngularJS" class="headerlink" title="Spring Boot &amp; AngularJS"></a>Spring Boot &amp; AngularJS</h1><p>Reference: <a href="http://blog.javachen.com/2015/01/06/build-app-with-spring-boot-and-gradle.html" target="_blank" rel="noopener">使用Spring Boot和Gradle创建AngularJS项目</a></p>
-<ol>
-<li>Generate Project<ul>
-<li><a href="http://start.spring.io/" target="_blank" rel="noopener">http://start.spring.io/</a></li>
-<li>GroupId: com.demo</li>
-<li>Artifact: ng-spring-boot</li>
-</ul>
-</li>
-</ol>
-<p>Structure:<br><img src="/images/ngspringboot-structure.png" alt="Project Structure"></p>
-<p>修改 main 方法，获取 ApplicationContext 信息。</p>
-<p>====<br>Temp:</p>
-<p>Take from ZhiHu, will delete soon.</p>
-<p>URL定位资源，用HTTP动词（GET,POST,DELETE,DETC）描述操作。</p>
-<ol>
-<li><p>REST描述的是在网络中client和server的一种交互形式</p>
-</li>
-<li><p>Server 提供的 RESTful API中，URL中只使用名词来指定资源，原则上不使用动词。<br>“资源”是REST架构或者说整个网络处理的核心。<br>比如：<br><a href="http://api.qc.com/v1/newsfeed" target="_blank" rel="noopener">http://api.qc.com/v1/newsfeed</a>: 获取某人的新鲜;<br><a href="http://api.qc.com/v1/friends" target="_blank" rel="noopener">http://api.qc.com/v1/friends</a>: 获取某人的好友列表;<br><a href="http://api.qc.com/v1/profile" target="_blank" rel="noopener">http://api.qc.com/v1/profile</a>: 获取某人的详细信息;</p>
-</li>
-</ol>
-<ol>
-<li>用HTTP协议里的动词来实现资源的添加，修改，删除等操作。</li>
-</ol>
-<p>即通过HTTP动词来实现资源的状态扭转：<br>GET 用来获取资源<br>POST 用来新建资源（也可以用于更新资源）<br>PUT 用来更新资源，DELETE 用来删除资源</p>
-<p>比如：<br>GET /products : will return the list of all products<br>POST /products : will add a product to the collection<br>GET /products/4 : will retrieve product #4<br>PUT /products/4 : will update product #4</p>
-<ol>
-<li><p>Server和Client之间传递某资源的一个表现形式，<br>比如用JSON，XML传输文本，或者用JPG，WebP传输图片等。当然还可以压缩HTTP传输时的数据（on-wire data compression）。</p>
-</li>
-<li><p>用 HTTP Status Code传递Server的状态信息。<br>比如最常用的 200 表示成功，500 表示Server内部错误等。</p>
-</li>
-</ol>
-<p>Web端和Server只使用上述定义的API来传递数据和改变数据状态。<br>格式一般是JSON。</p>
-
-          
-        
-      
-    </div>
-    
-    
-    
-	
-	<div>
-      
-	</div>
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="https://ryanluoxu.github.io/2017/12/16/Database-PostgreSQL/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -513,8 +319,8 @@
               
                 <span class="post-meta-item-text">Post modified&#58;</span>
               
-              <time title="Post modified" itemprop="dateModified" datetime="2017-12-17T20:57:14+08:00">
-                2017-12-17
+              <time title="Post modified" itemprop="dateModified" datetime="2017-12-22T17:01:53+08:00">
+                2017-12-22
               </time>
             
           </span>
@@ -571,7 +377,8 @@
       
         
           
-            <p>Create Postgres database on Amazon Web Service.<br>Install pgAdmin as client application to connect to database.</p>
+            <p>Create Postgres database on Amazon Web Service.<br>Install pgAdmin as client application to connect to database.<br>Install SQuirreL SQL Client to connect to database.</p>
+<p>I personally prefer to use SQuirreL SQL Client than pgAdmin.</p>
 <h1 id="Create-Postgres-Database-on-AWS"><a href="#Create-Postgres-Database-on-AWS" class="headerlink" title="Create Postgres Database on AWS"></a>Create Postgres Database on AWS</h1><p>Create an AWS account before creating database.</p>
 <p>Reference: <a href="https://aws.amazon.com/getting-started/tutorials/create-connect-postgresql-db/" target="_blank" rel="noopener">Create and Connect to a PostgreSQL Database</a></p>
 <ul>
@@ -586,8 +393,8 @@
 <li>DB details: <ul>
 <li>tick <code>Only enable options eligible for RDS Free Usage Tier</code></li>
 <li>DB instance identifier: <code>myPostgresDB</code></li>
-<li>Master username: <code>admin123</code></li>
-<li>Master password: <code>admin123</code></li>
+<li>Master username: <code>xxxxxx</code></li>
+<li>Master password: <code>xxxxxx</code></li>
 </ul>
 </li>
 <li>Configure advanced settings<ul>
@@ -624,7 +431,51 @@
 </li>
 </ol>
 <p>Click <code>Save</code></p>
-<h1 id="Use-Squirrel-SQL-Client-as-Client-Application"><a href="#Use-Squirrel-SQL-Client-as-Client-Application" class="headerlink" title="Use Squirrel SQL Client as Client Application"></a>Use Squirrel SQL Client as Client Application</h1><p>Squirrel SQL Client Application<br>postgresql-42.1.4 driver</p>
+<h1 id="Use-Squirrel-SQL-Client-as-Client-Application"><a href="#Use-Squirrel-SQL-Client-as-Client-Application" class="headerlink" title="Use Squirrel SQL Client as Client Application"></a>Use Squirrel SQL Client as Client Application</h1><ol>
+<li>Install Squirrel SQL Client Application<ul>
+<li>Go to <a href="http://squirrel-sql.sourceforge.net/#installation" target="_blank" rel="noopener">SQuirreL SQL Client Download</a></li>
+<li>Download and install</li>
+</ul>
+</li>
+<li>Download PostgreSQL JDBC Driver<ul>
+<li>Go to <a href="https://jdbc.postgresql.org/download.html" target="_blank" rel="noopener">PostgreSQL JDBC Download</a></li>
+<li>Choose <code>PostgreSQL JDBC 4.2 Driver, 42.1.4</code></li>
+<li>Get <code>postgresql-42.1.4 driver</code></li>
+</ul>
+</li>
+<li>Add PostgreSQL driver for Squirrel SQL Client<ul>
+<li>Open <code>Squirrel SQL Client</code></li>
+<li>Choose <code>Driver</code> on the left</li>
+<li>Choose <code>+</code> to add driver</li>
+<li>Choose <code>Extra Class Path</code> and <code>Add</code></li>
+<li>Choose <code>postgresql-42.1.4 driver</code> just downloaded.</li>
+<li>Fill up:<ul>
+<li>PostgreSQL</li>
+<li>jdbc:postgresql://<host>:<5432>/<database></database></5432></host></li>
+<li><a href="http://jdbc.postgresql.org" target="_blank" rel="noopener">http://jdbc.postgresql.org</a></li>
+<li>org.postgresql.Driver</li>
+</ul>
+</li>
+<li>OK</li>
+</ul>
+</li>
+<li>Add Alias<ul>
+<li>Choose <code>Aliases</code> on the left</li>
+<li>Choose <code>+</code> to add</li>
+<li>Choose blue tick <code>PostgreSQL</code> as Driver</li>
+<li>Fill up:<ul>
+<li>Demo</li>
+<li>jdbc:postgresql://postgresql.cfqvncjculpj.ap-southeast-1.rds.amazonaws.com:5432/Demo</li>
+<li>userName</li>
+<li>password</li>
+</ul>
+</li>
+<li><code>Test</code></li>
+<li><code>Connect</code></li>
+<li><code>OK</code></li>
+</ul>
+</li>
+</ol>
 
           
         
@@ -2026,6 +1877,180 @@
 
 
     
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://ryanluoxu.github.io/2017/11/26/Hexo-的-Next-主题优化/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Ryan Luo Xu 罗旭">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar1.JPG">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="猎 日">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2017/11/26/Hexo-的-Next-主题优化/" itemprop="url">Hexo 的 Next 主题优化</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-11-26T13:49:21+08:00">
+                2017-11-26
+              </time>
+            
+
+            
+              <span class="post-meta-divider">|</span>
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-check-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Post modified&#58;</span>
+              
+              <time title="Post modified" itemprop="dateModified" datetime="2017-12-10T20:55:13+08:00">
+                2017-12-10
+              </time>
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/搭建博客/" itemprop="url" rel="index">
+                    <span itemprop="name">搭建博客</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <p><strong>声明：本文为 ryanluoxu 原创文章，欢迎转载，请在明显位置注明出处。</strong></p>
+<p>这篇博客用来记录和分享我对博客优化的过程，均为实际经历。欢迎纠正，与君共勉。</p>
+<h2 id="修改-Next-主题的-Scheme"><a href="#修改-Next-主题的-Scheme" class="headerlink" title="修改 Next 主题的 Scheme"></a>修改 Next 主题的 Scheme</h2><p>Next 默认的风格是 Muse。现有的四个风格里，我最喜欢 Gemini。<br>因为此风格的博客首页里，每篇博客有明显的分割。菜单在左侧，方便访问时转到别的页面。  </p>
+<p><strong>操作如下：</strong></p>
+<ol>
+<li>打开 D:\blog\themes\next_config.yml</li>
+<li>找到 <code>Scheme Settings</code></li>
+<li>去掉 <code>Gemini</code> 前面的 <code>#</code>。 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"># Schemes</span><br><span class="line">#scheme: Muse</span><br><span class="line">#scheme: Mist</span><br><span class="line">#scheme: Pisces</span><br><span class="line">scheme: Gemini</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<h2 id="添加访问统计"><a href="#添加访问统计" class="headerlink" title="添加访问统计"></a>添加访问统计</h2><p>开始时尝试用 LeanCloud，尝试数次无果，一直得不到访问数据。<br>改用 BuSuanZi，效果显著！</p>
+<p>博客主页效果：</p>
+<p><img src="/images/博客主页下方访问量.png" alt="博客主页下方访问量"></p>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2017/11/26/Hexo-的-Next-主题优化/#more" rel="contents">
+              Read more &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
+        
+      
+    </div>
+    
+    
+    
+	
+	<div>
+      
+	</div>
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
   </section>
 
   
@@ -2080,7 +2105,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">14</span>
+                  <span class="site-state-item-count">13</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>
@@ -2093,7 +2118,7 @@
                 
 				  <a href="/categories/index.html">
 				
-                  <span class="site-state-item-count">7</span>
+                  <span class="site-state-item-count">6</span>
                   <span class="site-state-item-name">categories</span>
                 </a>
               </div>
@@ -2106,7 +2131,7 @@
                 
 				  <a href="/tags/index.html">
 				
-                  <span class="site-state-item-count">39</span>
+                  <span class="site-state-item-count">36</span>
                   <span class="site-state-item-name">tags</span>
                 </a>
               </div>

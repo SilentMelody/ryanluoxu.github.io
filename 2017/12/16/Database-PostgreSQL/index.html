@@ -79,18 +79,18 @@
 
 
 
-<meta name="description" content="Create Postgres database on Amazon Web Service.Install pgAdmin as client application to connect to database. Create Postgres Database on AWSCreate an AWS accoun">
+<meta name="description" content="Create Postgres database on Amazon Web Service.Install pgAdmin as client application to connect to database.Install SQuirreL SQL Client to connect to database. ">
 <meta name="keywords" content="database,Postgres,install,setup,AWS">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Database - PostgreSQL on AWS">
 <meta property="og:url" content="https://ryanluoxu.github.io/2017/12/16/Database-PostgreSQL/index.html">
 <meta property="og:site_name" content="猎 日">
-<meta property="og:description" content="Create Postgres database on Amazon Web Service.Install pgAdmin as client application to connect to database. Create Postgres Database on AWSCreate an AWS account before creating database. Reference: C">
+<meta property="og:description" content="Create Postgres database on Amazon Web Service.Install pgAdmin as client application to connect to database.Install SQuirreL SQL Client to connect to database. I personally prefer to use SQuirreL SQL">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2017-12-17T12:57:14.000Z">
+<meta property="og:updated_time" content="2017-12-22T09:01:53.725Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Database - PostgreSQL on AWS">
-<meta name="twitter:description" content="Create Postgres database on Amazon Web Service.Install pgAdmin as client application to connect to database. Create Postgres Database on AWSCreate an AWS account before creating database. Reference: C">
+<meta name="twitter:description" content="Create Postgres database on Amazon Web Service.Install pgAdmin as client application to connect to database.Install SQuirreL SQL Client to connect to database. I personally prefer to use SQuirreL SQL">
 
 
 
@@ -318,8 +318,8 @@
               
                 <span class="post-meta-item-text">Post modified&#58;</span>
               
-              <time title="Post modified" itemprop="dateModified" datetime="2017-12-17T20:57:14+08:00">
-                2017-12-17
+              <time title="Post modified" itemprop="dateModified" datetime="2017-12-22T17:01:53+08:00">
+                2017-12-22
               </time>
             
           </span>
@@ -389,7 +389,8 @@
       
 
       
-        <p>Create Postgres database on Amazon Web Service.<br>Install pgAdmin as client application to connect to database.</p>
+        <p>Create Postgres database on Amazon Web Service.<br>Install pgAdmin as client application to connect to database.<br>Install SQuirreL SQL Client to connect to database.</p>
+<p>I personally prefer to use SQuirreL SQL Client than pgAdmin.</p>
 <h1 id="Create-Postgres-Database-on-AWS"><a href="#Create-Postgres-Database-on-AWS" class="headerlink" title="Create Postgres Database on AWS"></a>Create Postgres Database on AWS</h1><p>Create an AWS account before creating database.</p>
 <p>Reference: <a href="https://aws.amazon.com/getting-started/tutorials/create-connect-postgresql-db/" target="_blank" rel="noopener">Create and Connect to a PostgreSQL Database</a></p>
 <ul>
@@ -404,8 +405,8 @@
 <li>DB details: <ul>
 <li>tick <code>Only enable options eligible for RDS Free Usage Tier</code></li>
 <li>DB instance identifier: <code>myPostgresDB</code></li>
-<li>Master username: <code>admin123</code></li>
-<li>Master password: <code>admin123</code></li>
+<li>Master username: <code>xxxxxx</code></li>
+<li>Master password: <code>xxxxxx</code></li>
 </ul>
 </li>
 <li>Configure advanced settings<ul>
@@ -442,7 +443,51 @@
 </li>
 </ol>
 <p>Click <code>Save</code></p>
-<h1 id="Use-Squirrel-SQL-Client-as-Client-Application"><a href="#Use-Squirrel-SQL-Client-as-Client-Application" class="headerlink" title="Use Squirrel SQL Client as Client Application"></a>Use Squirrel SQL Client as Client Application</h1><p>Squirrel SQL Client Application<br>postgresql-42.1.4 driver</p>
+<h1 id="Use-Squirrel-SQL-Client-as-Client-Application"><a href="#Use-Squirrel-SQL-Client-as-Client-Application" class="headerlink" title="Use Squirrel SQL Client as Client Application"></a>Use Squirrel SQL Client as Client Application</h1><ol>
+<li>Install Squirrel SQL Client Application<ul>
+<li>Go to <a href="http://squirrel-sql.sourceforge.net/#installation" target="_blank" rel="noopener">SQuirreL SQL Client Download</a></li>
+<li>Download and install</li>
+</ul>
+</li>
+<li>Download PostgreSQL JDBC Driver<ul>
+<li>Go to <a href="https://jdbc.postgresql.org/download.html" target="_blank" rel="noopener">PostgreSQL JDBC Download</a></li>
+<li>Choose <code>PostgreSQL JDBC 4.2 Driver, 42.1.4</code></li>
+<li>Get <code>postgresql-42.1.4 driver</code></li>
+</ul>
+</li>
+<li>Add PostgreSQL driver for Squirrel SQL Client<ul>
+<li>Open <code>Squirrel SQL Client</code></li>
+<li>Choose <code>Driver</code> on the left</li>
+<li>Choose <code>+</code> to add driver</li>
+<li>Choose <code>Extra Class Path</code> and <code>Add</code></li>
+<li>Choose <code>postgresql-42.1.4 driver</code> just downloaded.</li>
+<li>Fill up:<ul>
+<li>PostgreSQL</li>
+<li>jdbc:postgresql://<host>:<5432>/<database></database></5432></host></li>
+<li><a href="http://jdbc.postgresql.org" target="_blank" rel="noopener">http://jdbc.postgresql.org</a></li>
+<li>org.postgresql.Driver</li>
+</ul>
+</li>
+<li>OK</li>
+</ul>
+</li>
+<li>Add Alias<ul>
+<li>Choose <code>Aliases</code> on the left</li>
+<li>Choose <code>+</code> to add</li>
+<li>Choose blue tick <code>PostgreSQL</code> as Driver</li>
+<li>Fill up:<ul>
+<li>Demo</li>
+<li>jdbc:postgresql://postgresql.cfqvncjculpj.ap-southeast-1.rds.amazonaws.com:5432/Demo</li>
+<li>userName</li>
+<li>password</li>
+</ul>
+</li>
+<li><code>Test</code></li>
+<li><code>Connect</code></li>
+<li><code>OK</code></li>
+</ul>
+</li>
+</ol>
 
       
     </div>
@@ -539,10 +584,6 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2017/12/17/RESTful-Web-Service-with-AngularJS-1/" rel="prev" title="RESTful Web Service with AngularJS">
-                RESTful Web Service with AngularJS <i class="fa fa-chevron-right"></i>
-              </a>
-            
           </div>
         </div>
       
@@ -629,7 +670,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">14</span>
+                  <span class="site-state-item-count">13</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>
@@ -642,7 +683,7 @@
                 
 				  <a href="/categories/index.html">
 				
-                  <span class="site-state-item-count">7</span>
+                  <span class="site-state-item-count">6</span>
                   <span class="site-state-item-name">categories</span>
                 </a>
               </div>
@@ -655,7 +696,7 @@
                 
 				  <a href="/tags/index.html">
 				
-                  <span class="site-state-item-count">39</span>
+                  <span class="site-state-item-count">36</span>
                   <span class="site-state-item-name">tags</span>
                 </a>
               </div>
