@@ -319,7 +319,7 @@
               
                 <span class="post-meta-item-text">Post modified&#58;</span>
               
-              <time title="Post modified" itemprop="dateModified" datetime="2017-12-25T14:34:49+08:00">
+              <time title="Post modified" itemprop="dateModified" datetime="2017-12-25T15:31:50+08:00">
                 2017-12-25
               </time>
             
@@ -377,7 +377,7 @@
       
         
           <p><strong>声明：本文为 ryanluoxu 原创文章，欢迎转载，请在明显位置注明出处。</strong></p>
-<p>在《学习 Spring Boot - 1》里面，我们在 Service 里面虚拟了用户的数据。 这篇博客接着上一篇往下，介绍如何接入 PostgreSQL 数据库。</p>
+<p>在《学习 Spring Boot - 1》里，用 Service 虚拟了用户的数据。 这篇博客接着上一篇往下，介绍如何接入 PostgreSQL 数据库。</p>
 <p>通常连接数据库，从 Service 层开始，要经过 DAO，DAO 里面需要调用已经完成 JDBC 连接设定的 DBUtil，创建了 connection 之后，通过执行 query 来传递数据。在 SpringBoot 里面，这一部分内容被预设在 Spring Data JPA 里面，通过调用 CrudRepository 即可。思路如下：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Rest Client --&gt; RestController | Service | Repository --&gt; PostgreSQL (DBName=Demo; Table=users)</span><br></pre></td></tr></table></figure></p>
 <p>根据这个思路，需要修改或者添加：</p>
 <ul>
