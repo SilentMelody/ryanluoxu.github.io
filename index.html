@@ -319,7 +319,7 @@
               
                 <span class="post-meta-item-text">Post modified&#58;</span>
               
-              <time title="Post modified" itemprop="dateModified" datetime="2018-01-11T16:03:48+08:00">
+              <time title="Post modified" itemprop="dateModified" datetime="2018-01-11T16:06:36+08:00">
                 2018-01-11
               </time>
             
@@ -376,41 +376,18 @@
 
       
         
-          
-            <h1 id="basic"><a href="#basic" class="headerlink" title="basic"></a>basic</h1><h2 id="what"><a href="#what" class="headerlink" title="what"></a>what</h2><ul>
+          <h1 id="Basic"><a href="#Basic" class="headerlink" title="Basic"></a>Basic</h1><h2 id="What"><a href="#What" class="headerlink" title="What"></a>What</h2><ul>
 <li>contract itself has an address and balance</li>
 <li>contains some functions for its logic</li>
 <li>the output will be post to blockchain </li>
-<li>made by <code>Solidity</code></li>
-</ul>
-<h2 id="editor"><a href="#editor" class="headerlink" title="editor"></a>editor</h2><p><a href="https://remix.ethereum.org/" target="_blank" rel="noopener">Remix - Solidity IDE</a></p>
-<h1 id="Sample"><a href="#Sample" class="headerlink" title="Sample"></a>Sample</h1><h2 id="RyanCoin-sol"><a href="#RyanCoin-sol" class="headerlink" title="RyanCoin.sol"></a>RyanCoin.sol</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line">pragma solidity ^0.4.0;</span><br><span class="line">contract RyanCoin &#123;</span><br><span class="line">    address public creator; </span><br><span class="line">    mapping (address =&gt; uint) public balances;</span><br><span class="line">    </span><br><span class="line">    /**</span><br><span class="line">     * - msg is global attribute.</span><br><span class="line">     * - This constructor is &apos;create&apos; button</span><br><span class="line">     */</span><br><span class="line">    function RyanCoin()&#123;</span><br><span class="line">        creator = msg.sender;</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    /**</span><br><span class="line">     * - creator use this function to give other people coins</span><br><span class="line">     * - make sure it is the creator running this function</span><br><span class="line">     */</span><br><span class="line">     function setCoin(address receiver, uint amount)&#123;</span><br><span class="line">         if(msg.sender != creator) throw;</span><br><span class="line">         balances[receiver] += amount;</span><br><span class="line">     &#125;</span><br><span class="line">     </span><br><span class="line">     /**</span><br><span class="line">      * - other participants use this function to transfer coins</span><br><span class="line">      */</span><br><span class="line">      function transfer(address receiver, uint amount)&#123;</span><br><span class="line">          if(amount &gt; balances[msg.sender]) throw;</span><br><span class="line">          balances[msg.sender] -= amount;</span><br><span class="line">          balances[receiver] += amount;</span><br><span class="line">      &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h2 id="Run"><a href="#Run" class="headerlink" title="Run"></a>Run</h2><ol>
-<li><code>Run</code></li>
-<li>Choose one of account as creator</li>
-<li><code>Create</code></li>
-</ol>
-<p><img src="/images/smart_contract_demo1.png" alt="smart_contract_demo1"></p>
-<p>Now RyanCoin is created with its own address.</p>
-<h2 id="Test"><a href="#Test" class="headerlink" title="Test"></a>Test</h2><h3 id="Give-1st-account-10-2nd-account-self-5"><a href="#Give-1st-account-10-2nd-account-self-5" class="headerlink" title="Give 1st account 10, 2nd account(self) 5"></a>Give 1st account 10, 2nd account(self) 5</h3><ol>
-<li>make sure select creator as account</li>
-<li>input <code>&quot;0xca35b7d915458ef540ade6068dfe2f44e8fa733c&quot;,10</code></li>
-<li><code>setCoin</code></li>
-</ol>
-<p><img src="/images/smart_contract_demo2.png" alt="smart_contract_demo2"></p>
-<h3 id="Check-balance"><a href="#Check-balance" class="headerlink" title="Check balance"></a>Check balance</h3><ol>
-<li>give <code>&quot;0x14723a09acff6d2a60dcdf7aa4aff308fddc160c&quot;</code></li>
-<li><code>balances</code></li>
-</ol>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&quot;0&quot;: &quot;uint256: 5&quot;</span><br></pre></td></tr></table></figure>
-<h3 id="Tranfer-2-coins-to-2nd-from-1st"><a href="#Tranfer-2-coins-to-2nd-from-1st" class="headerlink" title="Tranfer 2 coins to 2nd from 1st"></a>Tranfer 2 coins to 2nd from 1st</h3><ol>
-<li>select 1st account</li>
-<li>give <code>&quot;2nd address&quot;,2</code></li>
-<li><code>transfer</code></li>
-</ol>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&quot;address receiver&quot;: &quot;0x14723a09acff6d2a60dcdf7aa4aff308fddc160c&quot;,</span><br><span class="line">&quot;uint256 amount&quot;: &quot;2&quot;</span><br></pre></td></tr></table></figure>
-
-          
+<li>made by <code>Solidity</code>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2018/01/11/BlockChain-1-Smart-Contract/#more" rel="contents">
+              Read more &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
