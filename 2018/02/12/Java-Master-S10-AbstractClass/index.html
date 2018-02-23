@@ -87,7 +87,7 @@
 <meta property="og:site_name" content="猎 日">
 <meta property="og:description" content="Notes and Exersice for Abstract Class of Completed Java Master Class.">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2018-02-12T00:01:52.162Z">
+<meta property="og:updated_time" content="2018-02-19T23:35:36.445Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Java Master - S10.AbstractClass">
 <meta name="twitter:description" content="Notes and Exersice for Abstract Class of Completed Java Master Class.">
@@ -318,8 +318,8 @@
               
                 <span class="post-meta-item-text">Post modified&#58;</span>
               
-              <time title="Post modified" itemprop="dateModified" datetime="2018-02-12T08:01:52+08:00">
-                2018-02-12
+              <time title="Post modified" itemprop="dateModified" datetime="2018-02-20T07:35:36+08:00">
+                2018-02-20
               </time>
             
           </span>
@@ -406,7 +406,16 @@
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">public class main &#123;</span><br><span class="line"></span><br><span class="line">	public static void main(String[] args) &#123;</span><br><span class="line">		</span><br><span class="line">		Animal myDog = new Dog(&quot;funny&quot;);</span><br><span class="line">		myDog.eat();</span><br><span class="line">		</span><br><span class="line">		//Animal myChicken = new Chicken(&quot;fat&quot;);  X no fly method</span><br><span class="line">		Bird myChicken = new Chicken(&quot;fat&quot;);</span><br><span class="line">		myChicken.eat();</span><br><span class="line">		myChicken.fly();</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 </li>
 </ol>
-
+<h1 id="Common-and-Difference-between-Abstract-Class-and-Interface"><a href="#Common-and-Difference-between-Abstract-Class-and-Interface" class="headerlink" title="Common and Difference between Abstract Class and Interface"></a>Common and Difference between Abstract Class and Interface</h1><h2 id="Common"><a href="#Common" class="headerlink" title="Common"></a>Common</h2><ol>
+<li>Cannot instantiate them. Methods without an implementation</li>
+</ol>
+<h2 id="Difference"><a href="#Difference" class="headerlink" title="Difference"></a>Difference</h2><ol>
+<li>Abstract class can declare fields that are not static and final</li>
+<li>Abstract class can define public, protected and private concrete methods</li>
+<li>Abstract class can extend only one parent class but implement multiple interfaces</li>
+</ol>
+<p>The purpose of an abtract class is to provide a common definition of a base class that multiple derived classes can share.</p>
+<h1 id="Exercise"><a href="#Exercise" class="headerlink" title="Exercise"></a>Exercise</h1>
       
     </div>
     
@@ -590,7 +599,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">24</span>
+                  <span class="site-state-item-count">25</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>
@@ -603,7 +612,7 @@
                 
 				  <a href="/categories/index.html">
 				
-                  <span class="site-state-item-count">14</span>
+                  <span class="site-state-item-count">15</span>
                   <span class="site-state-item-name">categories</span>
                 </a>
               </div>
@@ -616,7 +625,7 @@
                 
 				  <a href="/tags/index.html">
 				
-                  <span class="site-state-item-count">69</span>
+                  <span class="site-state-item-count">72</span>
                   <span class="site-state-item-name">tags</span>
                 </a>
               </div>
@@ -677,7 +686,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Notes"><span class="nav-number">1.</span> <span class="nav-text">Notes</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Notes"><span class="nav-number">1.</span> <span class="nav-text">Notes</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Common-and-Difference-between-Abstract-Class-and-Interface"><span class="nav-number">2.</span> <span class="nav-text">Common and Difference between Abstract Class and Interface</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Common"><span class="nav-number">2.1.</span> <span class="nav-text">Common</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Difference"><span class="nav-number">2.2.</span> <span class="nav-text">Difference</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Exercise"><span class="nav-number">3.</span> <span class="nav-text">Exercise</span></a></li></ol></div>
             
 
           </div>

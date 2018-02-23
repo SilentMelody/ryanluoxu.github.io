@@ -87,7 +87,7 @@
 <meta property="og:site_name" content="猎 日">
 <meta property="og:description" content="Notes, Samples for JUnit.">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2018-02-14T00:01:26.272Z">
+<meta property="og:updated_time" content="2018-02-19T15:05:40.497Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="JUnit - Beginner">
 <meta name="twitter:description" content="Notes, Samples for JUnit.">
@@ -318,8 +318,8 @@
               
                 <span class="post-meta-item-text">Post modified&#58;</span>
               
-              <time title="Post modified" itemprop="dateModified" datetime="2018-02-14T08:01:26+08:00">
-                2018-02-14
+              <time title="Post modified" itemprop="dateModified" datetime="2018-02-19T23:05:40+08:00">
+                2018-02-19
               </time>
             
           </span>
@@ -391,11 +391,15 @@
       
         <p>Notes, Samples for JUnit.</p>
 <a id="more"></a>
-<h2 id="Class-to-be-tested"><a href="#Class-to-be-tested" class="headerlink" title="Class to be tested:"></a>Class to be tested:</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">package test;</span><br><span class="line"></span><br><span class="line">public class Calculator &#123;</span><br><span class="line">	public static int add(int num1, int num2) &#123;</span><br><span class="line">		return num1 + num2;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	public static int sub(int num1, int num2) &#123;</span><br><span class="line">		return num1 - num2;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h1 id="Sample-1"><a href="#Sample-1" class="headerlink" title="Sample 1"></a>Sample 1</h1><h2 id="Class-to-be-tested"><a href="#Class-to-be-tested" class="headerlink" title="Class to be tested:"></a>Class to be tested:</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">package test;</span><br><span class="line"></span><br><span class="line">public class Calculator &#123;</span><br><span class="line">	public static int add(int num1, int num2) &#123;</span><br><span class="line">		return num1 + num2;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	public static int sub(int num1, int num2) &#123;</span><br><span class="line">		return num1 - num2;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <h2 id="Test-Case"><a href="#Test-Case" class="headerlink" title="Test Case:"></a>Test Case:</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">package test;</span><br><span class="line"></span><br><span class="line">import static org.junit.Assert.assertEquals;</span><br><span class="line">import static org.junit.Assert.assertNotEquals;</span><br><span class="line"></span><br><span class="line">import org.junit.Test;</span><br><span class="line"></span><br><span class="line">public class CalculatorAddTest &#123;</span><br><span class="line"></span><br><span class="line">	@Test</span><br><span class="line">	public void pass() &#123;</span><br><span class="line">		assertEquals(&quot;Error in add()-1..&quot;, 3, Calculator.add(1, 2));</span><br><span class="line">		assertEquals(&quot;Error in add()-2..&quot;, -3, Calculator.add(-1, -2));</span><br><span class="line">		assertEquals(&quot;Error in add()-3..&quot;, -1, Calculator.add(-1, -2));</span><br><span class="line">	&#125;</span><br><span class="line">	</span><br><span class="line">	@Test</span><br><span class="line">	public void fail() &#123;</span><br><span class="line">		assertNotEquals(&quot;Error in add()-4..&quot;, 0, Calculator.add(1, 2));</span><br><span class="line">	&#125;</span><br><span class="line">	</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>Run this by: <strong>Run As - JUnit Test</strong></p>
 <h2 id="Test-Standalone-or-Test-Runner"><a href="#Test-Standalone-or-Test-Runner" class="headerlink" title="Test Standalone or Test Runner"></a>Test Standalone or Test Runner</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">package test;</span><br><span class="line"></span><br><span class="line">import org.junit.runner.JUnitCore;</span><br><span class="line">import org.junit.runner.Result;</span><br><span class="line">import org.junit.runner.notification.Failure;</span><br><span class="line"></span><br><span class="line">public class RunTestStandalone &#123;</span><br><span class="line">	public static void main(String[] args) &#123;</span><br><span class="line">		Result result = JUnitCore.runClasses(CalculatorAddTest.class);</span><br><span class="line">		for (Failure failure : result.getFailures()) &#123;</span><br><span class="line">			System.out.println(failure.toString());</span><br><span class="line">		&#125;</span><br><span class="line">		System.out.println(&quot;Result Pass? : &quot; + result.wasSuccessful());</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>Run this by: <strong>Run As - Java Application</strong></p>
+<h2 id="Test-Suite"><a href="#Test-Suite" class="headerlink" title="Test Suite"></a>Test Suite</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">import org.junit.runner.RunWith;</span><br><span class="line">import org.junit.runners.Suite;</span><br><span class="line">import org.junit.runners.Suite.SuiteClasses;</span><br><span class="line"></span><br><span class="line">@RunWith(Suite.class)</span><br><span class="line">@SuiteClasses(&#123; CalculatorAddTest.class, CalculatorSubTest.class &#125;)</span><br><span class="line">public class AllTests &#123;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>Run this by: <strong>Run As - JUnit Test</strong></p>
+<h1 id="Sample-2"><a href="#Sample-2" class="headerlink" title="Sample 2"></a>Sample 2</h1><h2 id="Testing-class"><a href="#Testing-class" class="headerlink" title="Testing class:"></a>Testing class:</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line">public class Animal &#123;</span><br><span class="line">	String name;</span><br><span class="line">	double speed;</span><br><span class="line"></span><br><span class="line">	public Animal(String name, double speed) &#123;</span><br><span class="line">		this.name = name;</span><br><span class="line">		this.speed = speed;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	public String getName() &#123;</span><br><span class="line">		return name;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	public double getSpeed() &#123;</span><br><span class="line">		return speed;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	public double walkSpeed () &#123;</span><br><span class="line">		return speed;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	public double runSpeed() &#123;</span><br><span class="line">		return speed*2;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>##</p>
 
       
     </div>
@@ -492,6 +496,10 @@
 
           <div class="post-nav-prev post-nav-item">
             
+              <a href="/2018/02/22/PostgreSQL-10-Windows-使用记录/" rel="prev" title="PostgreSQL 10 Windows 使用记录">
+                PostgreSQL 10 Windows 使用记录 <i class="fa fa-chevron-right"></i>
+              </a>
+            
           </div>
         </div>
       
@@ -578,7 +586,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">24</span>
+                  <span class="site-state-item-count">25</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>
@@ -591,7 +599,7 @@
                 
 				  <a href="/categories/index.html">
 				
-                  <span class="site-state-item-count">14</span>
+                  <span class="site-state-item-count">15</span>
                   <span class="site-state-item-name">categories</span>
                 </a>
               </div>
@@ -604,7 +612,7 @@
                 
 				  <a href="/tags/index.html">
 				
-                  <span class="site-state-item-count">69</span>
+                  <span class="site-state-item-count">72</span>
                   <span class="site-state-item-name">tags</span>
                 </a>
               </div>
@@ -665,7 +673,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Class-to-be-tested"><span class="nav-number">1.</span> <span class="nav-text">Class to be tested:</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Test-Case"><span class="nav-number">2.</span> <span class="nav-text">Test Case:</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Test-Standalone-or-Test-Runner"><span class="nav-number">3.</span> <span class="nav-text">Test Standalone or Test Runner</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Sample-1"><span class="nav-number">1.</span> <span class="nav-text">Sample 1</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Class-to-be-tested"><span class="nav-number">1.1.</span> <span class="nav-text">Class to be tested:</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Test-Case"><span class="nav-number">1.2.</span> <span class="nav-text">Test Case:</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Test-Standalone-or-Test-Runner"><span class="nav-number">1.3.</span> <span class="nav-text">Test Standalone or Test Runner</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Test-Suite"><span class="nav-number">1.4.</span> <span class="nav-text">Test Suite</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Sample-2"><span class="nav-number">2.</span> <span class="nav-text">Sample 2</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Testing-class"><span class="nav-number">2.1.</span> <span class="nav-text">Testing class:</span></a></li></ol></li></ol></div>
             
 
           </div>
