@@ -319,7 +319,7 @@
               
                 <span class="post-meta-item-text">Post modified&#58;</span>
               
-              <time title="Post modified" itemprop="dateModified" datetime="2018-02-24T20:24:54+08:00">
+              <time title="Post modified" itemprop="dateModified" datetime="2018-02-24T20:26:44+08:00">
                 2018-02-24
               </time>
             
@@ -376,43 +376,14 @@
 
       
         
-          
-            <a id="more"></a>
-<h1 id="Windows-基本指令"><a href="#Windows-基本指令" class="headerlink" title="Windows 基本指令"></a>Windows 基本指令</h1><ul>
-<li>cd /d</li>
-<li>dir</li>
-</ul>
-<h1 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h1><h2 id="重置-postgres-用户的密码"><a href="#重置-postgres-用户的密码" class="headerlink" title="重置 postgres 用户的密码"></a>重置 postgres 用户的密码</h2><ol>
-<li>打开 H:\PostgreSQL\10\data\pg_hba.conf</li>
-<li><p>将下面的 md5 都改成 trust，保存。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"># IPv4 local connections:</span><br><span class="line">host    all             all             127.0.0.1/32            md5</span><br><span class="line"># IPv6 local connections:</span><br><span class="line">host    all             all             ::1/128                 md5</span><br><span class="line"># Allow replication connections from localhost, by a user with the</span><br><span class="line"># replication privilege.</span><br><span class="line">host    replication     all             127.0.0.1/32            md5</span><br><span class="line">host    replication     all             ::1/128                 md5</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>打开 cmd</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">psql -U postgres</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>无需密码，直接进入，然后</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">alter user postgres with password &apos;&lt;password&gt;&apos;;</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>修改好密码后，退出</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">\q</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>将 pg_hba.conf 的 trust 改回 md5 即可。</p>
-</li>
-</ol>
-<h2 id="SQuirrel-连接数据库"><a href="#SQuirrel-连接数据库" class="headerlink" title="SQuirrel 连接数据库"></a>SQuirrel 连接数据库</h2><ul>
-<li>jdbc:postgresql://localhost:5432/dk</li>
-<li>postgres</li>
-<li>xxxxx</li>
-</ul>
-<h2 id="SQL-指令"><a href="#SQL-指令" class="headerlink" title="SQL 指令"></a>SQL 指令</h2><h3 id="Create-table"><a href="#Create-table" class="headerlink" title="Create table"></a>Create table</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">CREATE TABLE account(</span><br><span class="line">	user_id serial PRIMARY KEY,</span><br><span class="line">	user_name VARCHAR (50) UNIQUE NOT NULL,</span><br><span class="line">	password VARCHAR (50) NOT NULL,</span><br><span class="line">	email VARCHAR (355) UNIQUE NOT NULL,</span><br><span class="line">	created_on TIMESTAMP NOT NULL,</span><br><span class="line">	last_login TIMESTAMP</span><br><span class="line">	role_id integer NOT NULL,</span><br><span class="line">);</span><br></pre></td></tr></table></figure>
-<h3 id="Insert"><a href="#Insert" class="headerlink" title="Insert"></a>Insert</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">INSERT INTO table(column1, column2, …)</span><br><span class="line">VALUES</span><br><span class="line"> (value1, value2, …);</span><br></pre></td></tr></table></figure>
-<hr>
-<p>drop table dream;</p>
-<p>CREATE TABLE dream(<br>    dream_id serial PRIMARY KEY,<br>    title VARCHAR (100),<br>    content VARCHAR (50000) NOT NULL,<br>    user_id integer NOT NULL<br>);</p>
-<p>SELECT * FROM dream;</p>
-<p>INSERT INTO dream (content, user_id)<br>VALUES<br> (‘Happy New Year everyone and welcome to the first Retro Flame blog post of the year. I’m back again with my annual ‘Dream Year’ post. Each year at this time, I look ahead  and ask myself what my IDEAL year would look like (absolutely zero limits) and then write it all down here on the blog. I started doing this in 2016 and as soon as I saw the difference it made on the way I approached a year, I promised I would do it every year. You also seem to really like it too, so here I am today with my Dream 2018 version.’,1);</p>
-
-          
+          <p>PostgreSQL 10 Windows 使用记录<br>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2018/02/22/PostgreSQL-10-Windows-使用记录/#more" rel="contents">
+              Read more &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
