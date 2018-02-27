@@ -87,7 +87,7 @@
 <meta property="og:site_name" content="猎 日">
 <meta property="og:description" content="PostgreSQL 10 Windows 使用记录">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2018-02-24T12:26:44.954Z">
+<meta property="og:updated_time" content="2018-02-27T14:19:48.086Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="PostgreSQL 10 Windows 使用记录">
 <meta name="twitter:description" content="PostgreSQL 10 Windows 使用记录">
@@ -318,8 +318,8 @@
               
                 <span class="post-meta-item-text">Post modified&#58;</span>
               
-              <time title="Post modified" itemprop="dateModified" datetime="2018-02-24T20:26:44+08:00">
-                2018-02-24
+              <time title="Post modified" itemprop="dateModified" datetime="2018-02-27T22:19:48+08:00">
+                2018-02-27
               </time>
             
           </span>
@@ -416,6 +416,7 @@
 <li>postgres</li>
 <li>xxxxx</li>
 </ul>
+<h2 id="Create-database-and-user"><a href="#Create-database-and-user" class="headerlink" title="Create database and user"></a>Create database and user</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">psql -U postgres</span><br><span class="line">用户 postgres 的口令：</span><br><span class="line"></span><br><span class="line">postgres=# create database logocessor</span><br><span class="line">CREATE DATABASE</span><br><span class="line"></span><br><span class="line">postgres=# CREATE USER logocessor WITH PASSWORD &apos;logocessor&apos;;</span><br><span class="line">CREATE ROLE</span><br><span class="line"></span><br><span class="line">postgres=# GRANT ALL PRIVILEGES ON database logocessor TO logocessor;</span><br><span class="line">GRANT</span><br></pre></td></tr></table></figure>
 <h2 id="SQL-指令"><a href="#SQL-指令" class="headerlink" title="SQL 指令"></a>SQL 指令</h2><h3 id="Create-table"><a href="#Create-table" class="headerlink" title="Create table"></a>Create table</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">CREATE TABLE account(</span><br><span class="line">	user_id serial PRIMARY KEY,</span><br><span class="line">	user_name VARCHAR (50) UNIQUE NOT NULL,</span><br><span class="line">	password VARCHAR (50) NOT NULL,</span><br><span class="line">	email VARCHAR (355) UNIQUE NOT NULL,</span><br><span class="line">	created_on TIMESTAMP NOT NULL,</span><br><span class="line">	last_login TIMESTAMP</span><br><span class="line">	role_id integer NOT NULL,</span><br><span class="line">);</span><br></pre></td></tr></table></figure>
 <h3 id="Insert"><a href="#Insert" class="headerlink" title="Insert"></a>Insert</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">INSERT INTO table(column1, column2, …)</span><br><span class="line">VALUES</span><br><span class="line"> (value1, value2, …);</span><br></pre></td></tr></table></figure>
 <hr>
@@ -694,7 +695,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Windows-基本指令"><span class="nav-number">1.</span> <span class="nav-text">Windows 基本指令</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#问题"><span class="nav-number">2.</span> <span class="nav-text">问题</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#重置-postgres-用户的密码"><span class="nav-number">2.1.</span> <span class="nav-text">重置 postgres 用户的密码</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#SQuirrel-连接数据库"><span class="nav-number">2.2.</span> <span class="nav-text">SQuirrel 连接数据库</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#SQL-指令"><span class="nav-number">2.3.</span> <span class="nav-text">SQL 指令</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Create-table"><span class="nav-number">2.3.1.</span> <span class="nav-text">Create table</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Insert"><span class="nav-number">2.3.2.</span> <span class="nav-text">Insert</span></a></li></ol></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Windows-基本指令"><span class="nav-number">1.</span> <span class="nav-text">Windows 基本指令</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#问题"><span class="nav-number">2.</span> <span class="nav-text">问题</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#重置-postgres-用户的密码"><span class="nav-number">2.1.</span> <span class="nav-text">重置 postgres 用户的密码</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#SQuirrel-连接数据库"><span class="nav-number">2.2.</span> <span class="nav-text">SQuirrel 连接数据库</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Create-database-and-user"><span class="nav-number">2.3.</span> <span class="nav-text">Create database and user</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#SQL-指令"><span class="nav-number">2.4.</span> <span class="nav-text">SQL 指令</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Create-table"><span class="nav-number">2.4.1.</span> <span class="nav-text">Create table</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Insert"><span class="nav-number">2.4.2.</span> <span class="nav-text">Insert</span></a></li></ol></li></ol></li></ol></div>
             
 
           </div>
