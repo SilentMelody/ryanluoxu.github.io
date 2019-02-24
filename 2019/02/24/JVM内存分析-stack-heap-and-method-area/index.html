@@ -88,7 +88,7 @@
 <meta property="og:description" content="JVM的内存分为三个区域：  栈 stack 堆 heap 方法区 method area">
 <meta property="og:locale" content="en">
 <meta property="og:image" content="https://ryanluoxu.github.io/images/JVM内存分析.png">
-<meta property="og:updated_time" content="2019-02-24T09:00:41.104Z">
+<meta property="og:updated_time" content="2019-02-24T09:04:00.384Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="JVM内存分析-stack, heap and method area">
 <meta name="twitter:description" content="JVM的内存分为三个区域：  栈 stack 堆 heap 方法区 method area">
@@ -320,7 +320,7 @@
               
                 <span class="post-meta-item-text">Post modified&#58;</span>
               
-              <time title="Post modified" itemprop="dateModified" datetime="2019-02-24T17:00:41+08:00">
+              <time title="Post modified" itemprop="dateModified" datetime="2019-02-24T17:04:00+08:00">
                 2019-02-24
               </time>
             
@@ -425,16 +425,14 @@
 </ul>
 <h1 id="举例-图示"><a href="#举例-图示" class="headerlink" title="举例+图示"></a>举例+图示</h1><h2 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line">class Student&#123;</span><br><span class="line">	String name;</span><br><span class="line">	int age;</span><br><span class="line">	void showAge() &#123;</span><br><span class="line">		System.out.println(name + &quot; : &quot; + age);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">public class JvmStackHeapSample &#123;</span><br><span class="line">	</span><br><span class="line">	static int averageAge = 28;</span><br><span class="line">	</span><br><span class="line">	public static void main(String[] args) &#123;</span><br><span class="line">		Student student = new Student();</span><br><span class="line">		student.name = &quot;ryan&quot;;</span><br><span class="line">		student.age = averageAge;</span><br><span class="line">		student.showAge();</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	void anyMethod()&#123;</span><br><span class="line">		...</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <h2 id="分析"><a href="#分析" class="headerlink" title="分析"></a>分析</h2><ul>
-<li><p>运行程序，首先使用方法区加载类信息</p>
-<ul>
+<li>运行程序，首先使用方法区加载类信息<ul>
 <li>代码</li>
 <li>静态变量</li>
 <li>静态方法</li>
 <li>String常量</li>
 </ul>
 </li>
-<li><p>开始执行 main 方法，创建main()栈帧</p>
-</li>
+<li>开始执行 main 方法，创建main()栈帧</li>
 <li>创建局部变量 student = null</li>
 <li>在堆里创建Student类对象，调用构造器初始化对象</li>
 <li>将新建对象的地址赋值给student</li>
