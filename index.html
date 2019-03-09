@@ -319,7 +319,7 @@
               
                 <span class="post-meta-item-text">Post modified&#58;</span>
               
-              <time title="Post modified" itemprop="dateModified" datetime="2019-03-09T11:58:48+08:00">
+              <time title="Post modified" itemprop="dateModified" datetime="2019-03-09T12:09:50+08:00">
                 2019-03-09
               </time>
             
@@ -376,11 +376,15 @@
 
       
         
-          
-            <h1 id="DateFormat"><a href="#DateFormat" class="headerlink" title="DateFormat"></a>DateFormat</h1><h2 id="get-date-string-in-specific-format"><a href="#get-date-string-in-specific-format" class="headerlink" title="get date string in specific format"></a>get date string in specific format</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">Date date = new Date();</span><br><span class="line">DateFormat dateFormat = new SimpleDateFormat(&quot;dd-MMM-yyyy&quot;);</span><br><span class="line">String dateString = dateFormat.format(date);</span><br><span class="line">System.out.println(dateString); // 05-Mar-2019</span><br></pre></td></tr></table></figure>
-<h2 id="get-date-from-date-string"><a href="#get-date-from-date-string" class="headerlink" title="get date from date string"></a>get date from date string</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">String dateString2 = &quot;2019-03-05&quot;;</span><br><span class="line">DateFormat dateFormat2 = new SimpleDateFormat(&quot;yyyy-MM-dd&quot;);</span><br><span class="line">Date date2 = null;</span><br><span class="line">try &#123;</span><br><span class="line">	date2 = dateFormat2.parse(dateString2);</span><br><span class="line">&#125; catch (ParseException e) &#123;</span><br><span class="line">	e.printStackTrace();</span><br><span class="line">&#125;</span><br><span class="line">System.out.println(date2); // Tue Mar 05 00:00:00 SGT 2019</span><br></pre></td></tr></table></figure>
-<h1 id="Calendar"><a href="#Calendar" class="headerlink" title="Calendar"></a>Calendar</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line">/**</span><br><span class="line"> * 1st way : Wed Mar 06 00:00:00 SGT 2019</span><br><span class="line"> */</span><br><span class="line">Calendar calendar = new GregorianCalendar(2019, Calendar.MARCH, 6);</span><br><span class="line">System.out.println(calendar.getTime());</span><br><span class="line"></span><br><span class="line">/**</span><br><span class="line"> * 2nd way : Mon Apr 15 10:49:07 SGT 2019</span><br><span class="line"> */</span><br><span class="line">Calendar calendar2 = new GregorianCalendar();</span><br><span class="line">calendar2.set(Calendar.YEAR, 2019);</span><br><span class="line">calendar2.set(Calendar.MONTH, Calendar.APRIL);</span><br><span class="line">calendar2.set(Calendar.DATE, 15);</span><br><span class="line">calendar2.set(Calendar.HOUR_OF_DAY, 10);</span><br><span class="line">System.out.println(calendar2.getTime());</span><br><span class="line"></span><br><span class="line">/**</span><br><span class="line"> * 3rd way : Wed Mar 06 13:49:07 SGT 2019</span><br><span class="line"> */</span><br><span class="line">Calendar calendar3 = new GregorianCalendar();</span><br><span class="line">calendar3.setTime(new Date());</span><br><span class="line">System.out.println(calendar3.getTime());</span><br><span class="line"></span><br><span class="line">/**</span><br><span class="line"> * function</span><br><span class="line"> */</span><br><span class="line">calendar.add(Calendar.MONTH, 10);</span><br><span class="line">calendar.add(Calendar.DATE, -10);</span><br></pre></td></tr></table></figure>
-          
+          <h1 id="DateFormat"><a href="#DateFormat" class="headerlink" title="DateFormat"></a>DateFormat</h1><h2 id="get-date-string-in-specific-format"><a href="#get-date-string-in-specific-format" class="headerlink" title="get date string in specific format"></a>get date string in specific format</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">Date date = <span class="keyword">new</span> Date();</span><br><span class="line">DateFormat dateFormat = <span class="keyword">new</span> SimpleDateFormat(<span class="string">"dd-MMM-yyyy"</span>);</span><br><span class="line">String dateString = dateFormat.format(date);</span><br><span class="line">System.out.println(dateString); <span class="comment">// 05-Mar-2019</span></span><br></pre></td></tr></table></figure>
+<h2 id="get-date-from-date-string"><a href="#get-date-from-date-string" class="headerlink" title="get date from date string"></a>get date from date string</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">String dateString2 = <span class="string">"2019-03-05"</span>;</span><br><span class="line">DateFormat dateFormat2 = <span class="keyword">new</span> SimpleDateFormat(<span class="string">"yyyy-MM-dd"</span>);</span><br><span class="line">Date date2 = <span class="keyword">null</span>;</span><br><span class="line"><span class="keyword">try</span> &#123;</span><br><span class="line">	date2 = dateFormat2.parse(dateString2);</span><br><span class="line">&#125; <span class="keyword">catch</span> (ParseException e) &#123;</span><br><span class="line">	e.printStackTrace();</span><br><span class="line">&#125;</span><br><span class="line">System.out.println(date2); <span class="comment">// Tue Mar 05 00:00:00 SGT 2019</span></span><br></pre></td></tr></table></figure>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2019/03/05/Date-Demo/#more" rel="contents">
+              Read more &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
@@ -644,8 +648,8 @@
               
                 <span class="post-meta-item-text">Post modified&#58;</span>
               
-              <time title="Post modified" itemprop="dateModified" datetime="2019-02-24T17:04:00+08:00">
-                2019-02-24
+              <time title="Post modified" itemprop="dateModified" datetime="2019-03-09T12:00:53+08:00">
+                2019-03-09
               </time>
             
           </span>
