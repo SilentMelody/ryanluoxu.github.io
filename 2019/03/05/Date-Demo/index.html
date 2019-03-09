@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="Java 300集,DateFormat," />
+  <meta name="keywords" content="Java 300集,DateFormat,Date,Calendar," />
 
 
 
@@ -79,18 +79,18 @@
 
 
 
-<meta name="description" content="get date string in specific format1234Date date = new Date();DateFormat dateFormat = new SimpleDateFormat(&amp;quot;dd-MMM-yyyy&amp;quot;);String dateString = d">
-<meta name="keywords" content="Java 300集,DateFormat">
+<meta name="description" content="DateFormatget date string in specific format1234Date date = new Date();DateFormat dateFormat = new SimpleDateFormat(&amp;quot;dd-MMM-yyyy&amp;quot;);String date">
+<meta name="keywords" content="Java 300集,DateFormat,Date,Calendar">
 <meta property="og:type" content="article">
-<meta property="og:title" content="SimpleDateFormat Demo">
-<meta property="og:url" content="https://ryanluoxu.github.io/2019/03/05/SimpleDateFormat-Demo/index.html">
+<meta property="og:title" content="Date Demo">
+<meta property="og:url" content="https://ryanluoxu.github.io/2019/03/05/Date-Demo/index.html">
 <meta property="og:site_name" content="猎 日">
-<meta property="og:description" content="get date string in specific format1234Date date = new Date();DateFormat dateFormat = new SimpleDateFormat(&amp;quot;dd-MMM-yyyy&amp;quot;);String dateString = dateFormat.format(date);System.out.println(dateSt">
+<meta property="og:description" content="DateFormatget date string in specific format1234Date date = new Date();DateFormat dateFormat = new SimpleDateFormat(&amp;quot;dd-MMM-yyyy&amp;quot;);String dateString = dateFormat.format(date);System.out.prin">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2019-03-05T15:15:39.151Z">
+<meta property="og:updated_time" content="2019-03-09T03:58:48.852Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="SimpleDateFormat Demo">
-<meta name="twitter:description" content="get date string in specific format1234Date date = new Date();DateFormat dateFormat = new SimpleDateFormat(&amp;quot;dd-MMM-yyyy&amp;quot;);String dateString = dateFormat.format(date);System.out.println(dateSt">
+<meta name="twitter:title" content="Date Demo">
+<meta name="twitter:description" content="DateFormatget date string in specific format1234Date date = new Date();DateFormat dateFormat = new SimpleDateFormat(&amp;quot;dd-MMM-yyyy&amp;quot;);String dateString = dateFormat.format(date);System.out.prin">
 
 
 
@@ -120,13 +120,13 @@
 
 
 
-  <link rel="canonical" href="https://ryanluoxu.github.io/2019/03/05/SimpleDateFormat-Demo/"/>
+  <link rel="canonical" href="https://ryanluoxu.github.io/2019/03/05/Date-Demo/"/>
 
 
 
 
 
-  <title>SimpleDateFormat Demo | 猎 日</title>
+  <title>Date Demo | 猎 日</title>
   
 
 
@@ -273,7 +273,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://ryanluoxu.github.io/2019/03/05/SimpleDateFormat-Demo/">
+    <link itemprop="mainEntityOfPage" href="https://ryanluoxu.github.io/2019/03/05/Date-Demo/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Ryan Luo Xu 罗旭">
@@ -290,7 +290,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">SimpleDateFormat Demo</h1>
+          <h1 class="post-title" itemprop="name headline">Date Demo</h1>
         
 
         <div class="post-meta">
@@ -318,8 +318,8 @@
               
                 <span class="post-meta-item-text">Post modified&#58;</span>
               
-              <time title="Post modified" itemprop="dateModified" datetime="2019-03-05T23:15:39+08:00">
-                2019-03-05
+              <time title="Post modified" itemprop="dateModified" datetime="2019-03-09T11:58:48+08:00">
+                2019-03-09
               </time>
             
           </span>
@@ -355,8 +355,8 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/2019/03/05/SimpleDateFormat-Demo/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count gitment-comments-count" data-xid="/2019/03/05/SimpleDateFormat-Demo/" itemprop="commentsCount"></span>
+                <a href="/2019/03/05/Date-Demo/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count gitment-comments-count" data-xid="/2019/03/05/Date-Demo/" itemprop="commentsCount"></span>
                 </a>
               </span>
             
@@ -389,8 +389,9 @@
       
 
       
-        <h1 id="get-date-string-in-specific-format"><a href="#get-date-string-in-specific-format" class="headerlink" title="get date string in specific format"></a>get date string in specific format</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">Date date = new Date();</span><br><span class="line">DateFormat dateFormat = new SimpleDateFormat(&quot;dd-MMM-yyyy&quot;);</span><br><span class="line">String dateString = dateFormat.format(date);</span><br><span class="line">System.out.println(dateString); // 05-Mar-2019</span><br></pre></td></tr></table></figure>
-<h1 id="get-date-from-date-string"><a href="#get-date-from-date-string" class="headerlink" title="get date from date string"></a>get date from date string</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">String dateString2 = &quot;2019-03-05&quot;;</span><br><span class="line">DateFormat dateFormat2 = new SimpleDateFormat(&quot;yyyy-MM-dd&quot;);</span><br><span class="line">Date date2 = null;</span><br><span class="line">try &#123;</span><br><span class="line">	date2 = dateFormat2.parse(dateString2);</span><br><span class="line">&#125; catch (ParseException e) &#123;</span><br><span class="line">	e.printStackTrace();</span><br><span class="line">&#125;</span><br><span class="line">System.out.println(date2); // Tue Mar 05 00:00:00 SGT 2019</span><br></pre></td></tr></table></figure>
+        <h1 id="DateFormat"><a href="#DateFormat" class="headerlink" title="DateFormat"></a>DateFormat</h1><h2 id="get-date-string-in-specific-format"><a href="#get-date-string-in-specific-format" class="headerlink" title="get date string in specific format"></a>get date string in specific format</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">Date date = new Date();</span><br><span class="line">DateFormat dateFormat = new SimpleDateFormat(&quot;dd-MMM-yyyy&quot;);</span><br><span class="line">String dateString = dateFormat.format(date);</span><br><span class="line">System.out.println(dateString); // 05-Mar-2019</span><br></pre></td></tr></table></figure>
+<h2 id="get-date-from-date-string"><a href="#get-date-from-date-string" class="headerlink" title="get date from date string"></a>get date from date string</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">String dateString2 = &quot;2019-03-05&quot;;</span><br><span class="line">DateFormat dateFormat2 = new SimpleDateFormat(&quot;yyyy-MM-dd&quot;);</span><br><span class="line">Date date2 = null;</span><br><span class="line">try &#123;</span><br><span class="line">	date2 = dateFormat2.parse(dateString2);</span><br><span class="line">&#125; catch (ParseException e) &#123;</span><br><span class="line">	e.printStackTrace();</span><br><span class="line">&#125;</span><br><span class="line">System.out.println(date2); // Tue Mar 05 00:00:00 SGT 2019</span><br></pre></td></tr></table></figure>
+<h1 id="Calendar"><a href="#Calendar" class="headerlink" title="Calendar"></a>Calendar</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line">/**</span><br><span class="line"> * 1st way : Wed Mar 06 00:00:00 SGT 2019</span><br><span class="line"> */</span><br><span class="line">Calendar calendar = new GregorianCalendar(2019, Calendar.MARCH, 6);</span><br><span class="line">System.out.println(calendar.getTime());</span><br><span class="line"></span><br><span class="line">/**</span><br><span class="line"> * 2nd way : Mon Apr 15 10:49:07 SGT 2019</span><br><span class="line"> */</span><br><span class="line">Calendar calendar2 = new GregorianCalendar();</span><br><span class="line">calendar2.set(Calendar.YEAR, 2019);</span><br><span class="line">calendar2.set(Calendar.MONTH, Calendar.APRIL);</span><br><span class="line">calendar2.set(Calendar.DATE, 15);</span><br><span class="line">calendar2.set(Calendar.HOUR_OF_DAY, 10);</span><br><span class="line">System.out.println(calendar2.getTime());</span><br><span class="line"></span><br><span class="line">/**</span><br><span class="line"> * 3rd way : Wed Mar 06 13:49:07 SGT 2019</span><br><span class="line"> */</span><br><span class="line">Calendar calendar3 = new GregorianCalendar();</span><br><span class="line">calendar3.setTime(new Date());</span><br><span class="line">System.out.println(calendar3.getTime());</span><br><span class="line"></span><br><span class="line">/**</span><br><span class="line"> * function</span><br><span class="line"> */</span><br><span class="line">calendar.add(Calendar.MONTH, 10);</span><br><span class="line">calendar.add(Calendar.DATE, -10);</span><br></pre></td></tr></table></figure>
       
     </div>
     
@@ -440,7 +441,7 @@
   </li>
   <li class="post-copyright-link">
     <strong>Post link:</strong>
-    <a href="https://ryanluoxu.github.io/2019/03/05/SimpleDateFormat-Demo/" title="SimpleDateFormat Demo">https://ryanluoxu.github.io/2019/03/05/SimpleDateFormat-Demo/</a>
+    <a href="https://ryanluoxu.github.io/2019/03/05/Date-Demo/" title="Date Demo">https://ryanluoxu.github.io/2019/03/05/Date-Demo/</a>
   </li>
   <li class="post-copyright-license">
     <strong>Copyright Notice: </strong>
@@ -458,6 +459,10 @@
             <a href="/tags/Java-300集/" rel="tag"># Java 300集</a>
           
             <a href="/tags/DateFormat/" rel="tag"># DateFormat</a>
+          
+            <a href="/tags/Date/" rel="tag"># Date</a>
+          
+            <a href="/tags/Calendar/" rel="tag"># Calendar</a>
           
         </div>
       
@@ -592,7 +597,7 @@
                 
 				  <a href="/tags/index.html">
 				
-                  <span class="site-state-item-count">100</span>
+                  <span class="site-state-item-count">102</span>
                   <span class="site-state-item-name">tags</span>
                 </a>
               </div>
@@ -653,7 +658,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#get-date-string-in-specific-format"><span class="nav-number">1.</span> <span class="nav-text">get date string in specific format</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#get-date-from-date-string"><span class="nav-number">2.</span> <span class="nav-text">get date from date string</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#DateFormat"><span class="nav-number">1.</span> <span class="nav-text">DateFormat</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#get-date-string-in-specific-format"><span class="nav-number">1.1.</span> <span class="nav-text">get date string in specific format</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#get-date-from-date-string"><span class="nav-number">1.2.</span> <span class="nav-text">get date from date string</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Calendar"><span class="nav-number">2.</span> <span class="nav-text">Calendar</span></a></li></ol></div>
             
 
           </div>
